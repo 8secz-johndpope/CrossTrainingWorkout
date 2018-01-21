@@ -47,6 +47,7 @@
 		0DCBBC322014EE2C0090EAD2 /* CrossNoonTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossNoonTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCBBC362014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossNoonTrainingUITests.swift; sourceTree = "<group>"; };
 		0DCBBC382014EE2C0090EAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDDC3FB201504F4001D0560 /* NoonPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NoonPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		0DCBBC152014EE2C0090EAD2 /* CrossNoonTraining */ = {
 			isa = PBXGroup;
 			children = (
+				0DCBBC442014EE380090EAD2 /* Playground */,
 				0DCBBC162014EE2C0090EAD2 /* AppDelegate.swift */,
 				0DCBBC182014EE2C0090EAD2 /* ViewController.swift */,
 				0DCBBC1A2014EE2C0090EAD2 /* Main.storyboard */,
@@ -123,6 +125,14 @@
 				0DCBBC382014EE2C0090EAD2 /* Info.plist */,
 			);
 			path = CrossNoonTrainingUITests;
+			sourceTree = "<group>";
+		};
+		0DCBBC442014EE380090EAD2 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDC3FB201504F4001D0560 /* NoonPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
