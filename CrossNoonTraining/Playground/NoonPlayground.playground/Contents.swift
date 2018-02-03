@@ -1,58 +1,101 @@
 //: A UIKit based Playground for presenting user interface
-  
+
 import UIKit
 import PlaygroundSupport
 
-class MyViewController : UIViewController {
-    override func loadView() {
-        let view = UIView()
-        view.backgroundColor = .white
+//class MyViewController : UIViewController {
+//    override func loadView() {
+//        let view = UIView()
+//        view.backgroundColor = .white
+//
+//        let label = UILabel()
+//        label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
+//        label.text = "Hello World!"
+//        label.textColor = .black
+//
+//        view.addSubview(label)
+//        self.view = view
+//    }
+//}
+//// Present the view controller in the Live View window
+//PlaygroundPage.current.liveView = MyViewController()
 
-        let label = UILabel()
-        label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
-        label.text = "Hello World!"
-        label.textColor = .black
-        
-        view.addSubview(label)
-        self.view = view
-    }
-}
-// Present the view controller in the Live View window
-PlaygroundPage.current.liveView = MyViewController()
+// --------------------------------------------
+// - ATHLETE
+// --------------------------------------------
 
 class Athlete: CustomStringConvertible {
-    
+
     var id: String!
     var firstName: String!
     var lastName: String!
     var email: String!
     var age: Int!
-    
+
     var fullName: String {
         return firstName
     }
-    
+
     var description: String {
         guard let first = firstName, let last = lastName else { return "" }
         return "\(first) \(last)"
     }
 }
 
-class WOD {
-    
-    enum WODType: Int {
-        case amrap
-        case emom
-        case for_time
-        case finisher
-    }
-    
+// --------------------------------------------
+// - WOD
+// --------------------------------------------
+
+
+
+//protocol Wodable {
+//
+//    associatedtype ResultType
+//
+//    var id: String! { get set }
+//    var name: String! { get set }
+//    var type: WODType! { get set }
+//    var timeCap: TimeInterval! { get set }
+////    var movements: [MovementConfiguration]? { get set }
+//
+//}
+
+//enum WODType<T>: Int {
+//
+//    case amrap, emom, for_time, finisher
+//
+//    var resultType: T.Type {
+//        return T.self
+//    }
+//}
+
+class Wod<T>: CustomStringConvertible {
+
     var id: String!
     var name: String!
-    var type: WODType!
     var timeCap: TimeInterval!
+    var resultType: T.Type {
+        return T.self
+    }
     var movements: [MovementConfiguration]?
+
+    var description: String {
+        guard let name = name else { return "" }
+        return "\(self) - \(name)"
+    }
 }
+
+class WodAmrap: Wod<RoundResult> {}
+
+class WodEmom: Wod<EmomResult> {}
+
+class WodForTime: Wod<TimeResult> {}
+
+class WodFinisher: Wod<TimeResult> {}
+
+// --------------------------------------------
+// - RESULTS
+// --------------------------------------------
 
 protocol Resultable {
     var resultRepresentation: String { get }
@@ -60,75 +103,96 @@ protocol Resultable {
 
 class Result {
     var athlete: Athlete!
-    var wod: WOD!
+
+    required init() {
+        print("New Result")
+    }
 }
 
 class RoundResult: Result, Resultable {
-    
+
     var repetitions: Int!
     var rounds: Int!
-    
+
     var resultRepresentation: String {
         return "\(repetitions) + \(rounds)"
     }
 }
 
-class EmomResult {
-    
-    // EMOM
+class TimeResult: Result, Resultable {
+
+    var time: TimeInterval!
+
+    var resultRepresentation: String {
+        return String(time)
+    }
 }
 
+class EmomResult: Result, Resultable {
+
+    // EMOM
+    var resultRepresentation: String {
+        return ""
+    }
+}
+
+// --------------------------------------------
+// - MOVEMENT
+// --------------------------------------------
+
 class Movement: CustomStringConvertible {
-    
+
     enum MovementCategory {
         case weightLifting
         case bodyWeight
         case endurance
     }
-    
+
     enum MovementAmoutType {
-        
+
         case meters
         case repetitions
-        
+
         var format: String {
             return "reps"
         }
     }
-    
+
     var name: String?
     var categories: [MovementCategory]?
     var amountType: MovementAmoutType?
-    
+
     var description: String {
         return name != nil ? name! : ""
     }
 }
 
+// --------------------------------------------
+// - MOVEMENT CONFIGURATION
+// --------------------------------------------
+
 class MovementConfiguration: CustomStringConvertible {
-    
+
     var movement: Movement?
     var amount: Int?
-    
+
     var description: String {
         guard let mov = movement, let am = amount else { return "" }
         return "\(mov) x \(am)"
     }
 }
 
-class TimedResult: Result, Resultable {
-    
-    var time: TimeInterval!
-    
-    var resultRepresentation: String {
-        return String(time)
-    }
-}
+// T should be the result type
+class Session<T> {
 
-class Session {
-    
+    var wod: Wod<T>
     var date: Date!
-//    var results: [??]
+    var results: [T]!
+
+    init<WodType: Wod<T>>(_ wod: WodType) {
+        self.wod = wod
+        self.results = [T]()
+    }
 }
 
 // --------------------------------------------
@@ -186,8 +250,42 @@ runConf.movement = run
 // - CREATING WOD
 // --------------------------------------------
 
-let wod = WOD()
-wod.name "The first WOD"
-wod.movements = [muConf, puConf, runConf]
-wod.timeCap = 20
-wod.id = ""
+let amrap = WodAmrap()
+amrap.id = "1"
+amrap.name = "The first WOD1"
+amrap.movements = [muConf, puConf, runConf]
+amrap.timeCap = 20
+
+let forTime = WodForTime()
+forTime.id = "2"
+forTime.name = "The second WOD"
+forTime.movements = [muConf, puConf, runConf]
+forTime.timeCap = 20
+
+// --------------------------------------------
+// - CREATING RESULTS
+// --------------------------------------------
+
+let result1 = TimeResult()
+result1.athlete = athlete2
+result1.time = 2000
+
+let result2 = TimeResult()
+result2.athlete = athlete2
+result2.time = 3000
+
+let result3 = TimeResult()
+result3.athlete = athlete2
+result3.time = 4000
+
+// --------------------------------------------
+// - CREATING RESULTS
+// --------------------------------------------
+
+let amrapSession = Session(amrap)
+amrapSession.date = Date()
+print(amrapSession.results)
+
+let forTimeSession = Session(forTime)
+forTimeSession.results = [result1, result2, result3]
+print(forTimeSession.results)
