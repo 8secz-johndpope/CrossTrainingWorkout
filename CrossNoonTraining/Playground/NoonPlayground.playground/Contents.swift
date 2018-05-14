@@ -252,13 +252,13 @@ runConf.movement = run
 
 let amrap = WodAmrap()
 amrap.id = "1"
-amrap.name = "The first WOD1"
+//amrap.name = "The first WOD1"
 amrap.movements = [muConf, puConf, runConf]
 amrap.timeCap = 20
 
 let forTime = WodForTime()
 forTime.id = "2"
-forTime.name = "The second WOD"
+//forTime.name = "The second WOD"
 forTime.movements = [muConf, puConf, runConf]
 forTime.timeCap = 20
 
@@ -289,3 +289,4 @@ print(amrapSession.results)
 let forTimeSession = Session(forTime)
 forTimeSession.results = [result1, result2, result3]
 print(forTimeSession.results)
+
