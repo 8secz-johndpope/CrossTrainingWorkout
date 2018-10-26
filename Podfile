@@ -1,6 +1,6 @@
 platform :ios, '10.0'
 
-target 'CrossNoonTraining' do
+target 'CrossTrainingWorkout' do
   
   use_frameworks!
   
@@ -13,11 +13,11 @@ target 'CrossNoonTraining' do
   pod 'ObjectMapper+Realm'
   pod 'ListDataSourcesKit'
 
-  target 'CrossNoonTrainingTests' do
+  target 'CrossTrainingWorkoutTests' do
     inherit! :search_paths
   end
 
-  target 'CrossNoonTrainingUITests' do
+  target 'CrossTrainingWorkoutUITests' do
     inherit! :search_paths
   end
 
