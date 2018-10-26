@@ -290,11 +290,11 @@ extension Realm: NotifiyingReadableDatabase {
             switch changes {
             case .initial:
                 
-                print( Array(objects) as! [T] )
+//                print( Array(objects) )
                 block( .initial )
             case .update(_, let deletions, let insertions, let modifications):
                 
-                print( Array(objects) as! [T] )
+//                print( Array(objects) )
                 block( .update(deletions: deletions, insertions: insertions, modifications: modifications) )
             case .error(let error):
                 block( .error(error) )
@@ -314,7 +314,7 @@ extension Realm: NotifiyingReadableDatabase {
         }
         
         let arrayResults = Array(results) as! [T]
-        let testResult = DatabaseResults(withResults: arrayResults, andToken: nil)
+//        let testResult = DatabaseResults(withResults: arrayResults, andToken: nil)
         
         var token: NotifiyingToken?
         if let unwrappedObserveBlock = observeBlock {

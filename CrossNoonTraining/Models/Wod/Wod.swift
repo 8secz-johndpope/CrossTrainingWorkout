@@ -28,7 +28,7 @@ class Wod: Object {
     
     override var description: String {
 //        guard let name = name else { return "" }
-        return "\(name)"
+        return "\(String(describing: name))"
     }
 }
 

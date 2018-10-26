@@ -41,6 +41,6 @@ class RoundResult: Result, Resultable {
     }
     
     var resultRepresentation: String {
-        return "\(repetitions) + \(rounds)"
+        return "\(String(describing: repetitions)) + \(String(describing: rounds))"
     }
 }

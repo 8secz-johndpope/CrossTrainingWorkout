@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol FakeableCell: ReusableCell {
-    
-    static var fakeCellIdentifier: String { get }
-}
-extension FakeableCell where Self: UITableViewCell {
-    
-    static var fakeCellIdentifier: String {
-        return "\(Self.nibName)Fake"
-    }
-    
-}
+//protocol FakeableCell: TheReusableCell {
+//    
+//    static var fakeCellIdentifier: String { get }
+//}
+//extension FakeableCell where Self: UITableViewCell {
+//    
+//    static var fakeCellIdentifier: String {
+//        return "\(Self.nibName)Fake"
+//    }
+//    
+//}

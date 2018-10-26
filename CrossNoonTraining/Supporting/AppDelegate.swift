@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // --------------------------------------------
         // - CREATING ATHLETES
@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // - CREATING RESULTS
         // --------------------------------------------
         
-        let testMap = Map(mappingType: .fromJSON, JSON: ["": ""])
+//        let testMap = Map(mappingType: .fromJSON, JSON: ["": ""])
         
         let session1 = SessionAmrap()
         session1.date = Date()
@@ -136,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         session4.date = Date()
         session4.wod = amrap
         
-        let sessions: [Session] = [session1, session2]
+//        let sessions: [Session] = [session1, session2]
         
 //        print("🔥🔥🔥 \(Model.self is Object.self)")
 //        print("🔥🔥🔥 \(String == Query)")
@@ -171,7 +171,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
         
-        let results = realm.loadObjects(ofType: SessionAmrap.self, matching: nil) { changes in
+//        let results = realm.loadObjects(ofType: SessionAmrap.self, matching: nil) { changes in
 //            switch changes {
 //            case .initial:
 //                print(realm.objects(SessionAmrap.self).count)
@@ -184,7 +184,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            case .error(let error):
 //                print("error")
 //            }
-        }
+//        }
         
 //        var data: [SessionAmrap] = results.results
         
