@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import ObjectMapper
 
 extension Realm {
     
@@ -84,18 +83,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // - CREATING WOD
         // --------------------------------------------
         
+        let movements = List<MovementConfiguration>()
+        movements.append(objectsIn: [muConf, puConf, runConf])
+        
         let amrap = Wod()
         amrap.id = "1"
         amrap.wodType = .amrap
         amrap.name = "The first WOD1"
-        amrap.movements = [muConf, puConf, runConf]
+        amrap.movements = movements
         amrap.timeCap = 20
         
         let forTime = Wod()
         forTime.wodType = .forTime
         forTime.id = "2"
         forTime.name = "The second WOD"
-        forTime.movements = [muConf, puConf, runConf]
+        forTime.movements = movements
         forTime.timeCap = 20
         
         // --------------------------------------------

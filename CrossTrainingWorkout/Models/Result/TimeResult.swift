@@ -8,8 +8,6 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
 class TimeResult: Result, Resultable {
     
@@ -20,24 +18,8 @@ class TimeResult: Result, Resultable {
     var time: TimeInterval!
     
     // **************************************************************
-    // MARK: - Realm
+    // MARK: - Resultable
     // **************************************************************
-    
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
-    
-    // **************************************************************
-    // MARK: - ObjectMapper
-    // **************************************************************
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        
-    }
     
     var resultRepresentation: String {
         return String(time)

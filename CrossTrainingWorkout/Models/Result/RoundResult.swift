@@ -8,8 +8,6 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
 class RoundResult: Result, Resultable {
     
@@ -21,24 +19,8 @@ class RoundResult: Result, Resultable {
     var rounds: Int!
     
     // **************************************************************
-    // MARK: - Realm
+    // MARK: - Resultable
     // **************************************************************
-    
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
-    
-    // **************************************************************
-    // MARK: - ObjectMapper
-    // **************************************************************
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        
-    }
     
     var resultRepresentation: String {
         return "\(String(describing: repetitions)) + \(String(describing: rounds))"

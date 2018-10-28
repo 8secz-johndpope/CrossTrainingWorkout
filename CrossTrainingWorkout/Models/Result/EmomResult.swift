@@ -8,30 +8,18 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
 class EmomResult: Result, Resultable {
     
     // **************************************************************
-    // MARK: - Realm
+    // MARK: - Variables
     // **************************************************************
     
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
+    // 🤔
     
     // **************************************************************
-    // MARK: - ObjectMapper
+    // MARK: - Resultable
     // **************************************************************
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        
-    }
     
     // EMOM
     var resultRepresentation: String {

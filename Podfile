@@ -9,8 +9,6 @@ target 'CrossTrainingWorkout' do
 
   # Pods for CrossNoonTraining
   pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa', :branch => 'master', submodules: true
-  pod 'ObjectMapper', '~> 3.3'
-  pod 'ObjectMapper+Realm'
   pod 'ListDataSourcesKit'
 
   target 'CrossTrainingWorkoutTests' do

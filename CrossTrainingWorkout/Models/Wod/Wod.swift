@@ -8,26 +8,47 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-class Wod: Object {
+class Wod: Object, Codable {
     
-    enum WodType {
+    // **************************************************************
+    // MARK: - WodType
+    // **************************************************************
+    
+    enum WodType: String, Codable {
         case amrap
         case forTime
         case emom
         case finisher
     }
     
+    // **************************************************************
+    // MARK: - Variables
+    // **************************************************************
+    
     var id: String!
     var name: String!
     var timeCap: TimeInterval!
     var wodType: WodType!
-    var movements: [MovementConfiguration]?
+    var movements: List<MovementConfiguration>?
+    
+    // **************************************************************
+    // MARK: - Encodable
+    // **************************************************************
+    
+    func encode(to encoder: Encoder) throws {
+        
+    }
+    
+    // **************************************************************
+    // MARK: - Decodable
+    // **************************************************************
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
+    }
     
     override var description: String {
-//        guard let name = name else { return "" }
         return "\(String(describing: name))"
     }
 }

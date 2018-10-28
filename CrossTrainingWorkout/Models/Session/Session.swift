@@ -9,16 +9,14 @@
 import Foundation
 import Realm
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-protocol SessionResultable {
+protocol SessionResultable: Codable {
     
-    associatedtype T:RealmCollectionValue
+    associatedtype T: RealmCollectionValue
     var results: List<T>! { get set }
 }
 
-class Session: Object, Mappable, SessionResultable {
+class Session: Object, Codable, SessionResultable {
     
     typealias T = Object
     
@@ -32,28 +30,19 @@ class Session: Object, Mappable, SessionResultable {
     var results: List<T>!
     
     // **************************************************************
-    // MARK: - Realm
+    // MARK: - Encodable
     // **************************************************************
     
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
-    
-    // **************************************************************
-    // MARK: - ObjectMapper
-    // **************************************************************
-    
-//    convenience init?<WodType: Wod<T>>(_ wod: WodType, map: Map) {
-//        self.init(map: map)
-////        self.wod = wod
-//    }
-    
-    required convenience init?(map: Map) {
-        self.init()
+    func encode(to encoder: Encoder) throws {
+        
     }
     
-    func mapping(map: Map) {
-        
+    // **************************************************************
+    // MARK: - Decodable
+    // **************************************************************
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
     }
     
     override var description: String {
@@ -63,37 +52,17 @@ class Session: Object, Mappable, SessionResultable {
 }
 
 class SessionAmrap: Session {
-    
     typealias T = RoundResult
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
 }
 
 class SessionFinisher: Session {
-    
     typealias T = RoundResult
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
 }
 
 class SessionForTime: Session {
-    
     typealias T = RoundResult
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
 }
 
 class SessionEmom: Session {
-    
     typealias T = RoundResult
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
 }

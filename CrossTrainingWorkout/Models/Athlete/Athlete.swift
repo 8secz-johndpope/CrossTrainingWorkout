@@ -8,10 +8,8 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-class Athlete: Object, Mappable {
+class Athlete: Object, Codable {
     
     // **************************************************************
     // MARK: - Variables
@@ -27,19 +25,7 @@ class Athlete: Object, Mappable {
         return firstName
     }
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
     override class func primaryKey() -> String? {
         return "id"
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        firstName <- map["firstName"]
-        lastName <- map["lastName"]
-        email <- map["email"]
-        age <- map["age"]
     }
 }

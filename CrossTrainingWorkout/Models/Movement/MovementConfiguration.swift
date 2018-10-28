@@ -8,10 +8,8 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-class MovementConfiguration: Object, Mappable {
+class MovementConfiguration: Object, Codable {
     
     // **************************************************************
     // MARK: - Variables
@@ -21,23 +19,19 @@ class MovementConfiguration: Object, Mappable {
     var amount: Int?
     
     // **************************************************************
-    // MARK: - Realm
+    // MARK: - Encodable
     // **************************************************************
     
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
-    
-    // **************************************************************
-    // MARK: - ObjectMapper
-    // **************************************************************
-    
-    required convenience init?(map: Map) {
-        self.init()
+    func encode(to encoder: Encoder) throws {
+        
     }
     
-    func mapping(map: Map) {
-        
+    // **************************************************************
+    // MARK: - Decodable
+    // **************************************************************
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
     }
     
     override var description: String {

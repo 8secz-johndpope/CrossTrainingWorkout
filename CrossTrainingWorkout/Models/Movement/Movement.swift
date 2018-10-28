@@ -8,16 +8,14 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-class Movement: Object, Mappable {
+class Movement: Object, Codable {
     
     // **************************************************************
     // MARK: - Enums
     // **************************************************************
     
-    enum MovementCategory: Int {
+    enum MovementCategory: Int, Codable {
         case weightLifting, bodyWeight, endurance
     }
     
@@ -25,7 +23,7 @@ class Movement: Object, Mappable {
     // MARK: - Enums
     // **************************************************************
     
-    enum MovementAmoutType: Int {
+    enum MovementAmoutType: Int, Codable {
         
         case meters, repetitions
         
@@ -57,18 +55,22 @@ class Movement: Object, Mappable {
     }
     
     // **************************************************************
-    // MARK: - ObjectMapper
+    // MARK: - Encodable
     // **************************************************************
     
-    required convenience init?(map: Map) {
-        self.init()
+    func encode(to encoder: Encoder) throws {
+        
     }
     
-    func mapping(map: Map) {
-        
-        name <- map["name"]
-        amountType <- map["amountType"]
-        categories <- map["categories"]
+    // **************************************************************
+    // MARK: - Decodable
+    // **************************************************************
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
+//        name <- map["name"]
+//        amountType <- map["amountType"]
+//        categories <- map["categories"]
     }
     
 }

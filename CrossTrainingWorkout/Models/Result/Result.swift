@@ -8,34 +8,12 @@
 
 import Foundation
 import RealmSwift
-import ObjectMapper
-import ObjectMapper_Realm
 
-class Result: Object, Mappable {
+class Result: Object, Codable {
     
     // **************************************************************
     // MARK: - Variables
     // **************************************************************
     
     var athlete: Athlete!
-    
-    // **************************************************************
-    // MARK: - Realm
-    // **************************************************************
-    
-//    override class func primaryKey() -> String? {
-//        return "username"
-//    }
-    
-    // **************************************************************
-    // MARK: - ObjectMapper
-    // **************************************************************
-    
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    func mapping(map: Map) {
-        
-    }
 }
