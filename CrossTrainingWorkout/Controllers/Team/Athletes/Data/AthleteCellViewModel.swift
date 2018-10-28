@@ -3,7 +3,7 @@
 //  CrossNoonTraining
 //
 //  Created by Jonathan Arnal on 07/08/2018.
-//  Copyright © 2018 Nouveal. All rights reserved.
+//  Copyright © 2018 Jonathan Arnal. All rights reserved.
 //
 
 import Foundation
