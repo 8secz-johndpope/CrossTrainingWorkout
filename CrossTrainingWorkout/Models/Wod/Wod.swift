@@ -26,10 +26,10 @@ class Wod: Object, Codable {
     // MARK: - Variables
     // **************************************************************
     
-    var id: String!
-    var name: String!
+    @objc dynamic var id: String!
+    @objc dynamic var name: String!
     var timeCap: TimeInterval!
-    var wodType: WodType!
+    @objc dynamic var wodType: String! = ""
     var movements: List<MovementConfiguration>?
     
     // **************************************************************

@@ -15,8 +15,8 @@ class MovementConfiguration: Object, Codable {
     // MARK: - Variables
     // **************************************************************
     
-    var movement: Movement?
-    var amount: Int?
+    @objc dynamic var movement: Movement?
+    @objc dynamic var amount = 0
     
     // **************************************************************
     // MARK: - Encodable
@@ -35,7 +35,7 @@ class MovementConfiguration: Object, Codable {
     }
     
     override var description: String {
-        guard let mov = movement, let am = amount else { return "" }
-        return "\(mov) x \(am)"
+        guard let mov = movement else { return "" }
+        return "\(mov) x \(amount)"
     }
 }
