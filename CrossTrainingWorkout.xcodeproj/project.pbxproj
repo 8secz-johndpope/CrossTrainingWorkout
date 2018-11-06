@@ -23,6 +23,7 @@
 		0D306AED2191A7A3003C4C2D /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AEC2191A7A3003C4C2D /* Localizations.swift */; };
 		0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */; };
 		0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */; };
+		0D306B202191F06F003C4C2D /* ValidableTextFieldContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -110,6 +111,7 @@
 		0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossTrainingWorkoutTests.swift; sourceTree = "<group>"; };
 		0D306B172191E41F003C4C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainer.swift; sourceTree = "<group>"; };
+		0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainerTests.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */,
+				0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */,
 				0D306B172191E41F003C4C2D /* Info.plist */,
 			);
 			path = CrossTrainingWorkoutTests;
@@ -725,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D306B202191F06F003C4C2D /* ValidableTextFieldContainerTests.swift in Sources */,
 				0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
