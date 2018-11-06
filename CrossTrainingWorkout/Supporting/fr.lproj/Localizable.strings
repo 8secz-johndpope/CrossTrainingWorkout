@@ -5,3 +5,20 @@
   Created by Jonathan Arnal on 24/02/2018.
   Copyright © 2018 Jonathan Arnal. All rights reserved.
 */
+
+"INPUT_VALIDATION.STATUS.INVALID" = "%@ invalide";
+"INPUT_VALIDATION.STATUS.EMPTY" = "%@ vide";
+
+"INPUT_VALIDATION.NOT_VALIDATED" = "Le champ n'as pu être validé";
+"INPUT_VALIDATION.DEFAULT.TITLE" = "Champ";
+
+"INPUT_VALIDATION.EMAIL.TITLE" = "E-mail";
+"INPUT_VALIDATION.FIRSTNAME.TITLE" = "Prénom";
+"INPUT_VALIDATION.LASTNAME.TITLE" = "Nom";
+"INPUT_VALIDATION.PHONE_NUMBER.TITLE" = "Numéro de téléphone";
+"INPUT_VALIDATION.ADDRESS.POSTAL_CODE.TITLE" = "Code postal";
+"INPUT_VALIDATION.ADDRESS.CITY.TITLE" = "Ville";
+"INPUT_VALIDATION.PASSWORD.TITLE" = "Mot de passe";
+
+"INPUT_VALIDATION.PASSWORD.CORRESPONDANCE" = "Les deux mots de passe ne correspondent pas";
+"INPUT_VALIDATION.PASSWORD.LENGTH" = "Votre mot de passe doit contenir au moins 6 caractères";

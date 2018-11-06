@@ -20,6 +20,9 @@
 		0D306AE621919354003C4C2D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE521919354003C4C2D /* App.swift */; };
 		0D306AE821919778003C4C2D /* AppDependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE721919778003C4C2D /* AppDependent.swift */; };
 		0D306AEA21919B93003C4C2D /* DatabaseMockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */; };
+		0D306AED2191A7A3003C4C2D /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AEC2191A7A3003C4C2D /* Localizations.swift */; };
+		0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */; };
+		0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -53,8 +56,6 @@
 		0DCBBC1C2014EE2C0090EAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBBC1A2014EE2C0090EAD2 /* Main.storyboard */; };
 		0DCBBC1E2014EE2C0090EAD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBBC1D2014EE2C0090EAD2 /* Assets.xcassets */; };
 		0DCBBC212014EE2C0090EAD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBBC1F2014EE2C0090EAD2 /* LaunchScreen.storyboard */; };
-		0DCBBC2C2014EE2C0090EAD2 /* CrossNoonTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBBC2B2014EE2C0090EAD2 /* CrossNoonTrainingTests.swift */; };
-		0DCBBC372014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBBC362014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift */; };
 		0DF2FFB521195CC800F3864F /* RealmEntityDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFB421195CC800F3864F /* RealmEntityDataHandler.swift */; };
 		0DF2FFB721198F4000F3864F /* ResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFB621198F4000F3864F /* ResultsExtension.swift */; };
 		0DF2FFBC2119902D00F3864F /* AthleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFBB2119902D00F3864F /* AthleteCell.swift */; };
@@ -63,27 +64,16 @@
 		0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */; };
 		0DF2FFC42119918C00F3864F /* ValidableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFC32119918C00F3864F /* ValidableTextField.swift */; };
 		0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */; };
-		42BE4F38B3F6F4791139C337 /* Pods_CrossNoonTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694F0E02CAB80B776DB326C /* Pods_CrossNoonTrainingUITests.framework */; };
-		7464891788BD3662E4C21DAE /* Pods_CrossTrainingWorkoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83260309D71B5871BF5479FB /* Pods_CrossTrainingWorkoutTests.framework */; };
 		87DC4DF92D1E41C8C9403553 /* Pods_CrossTrainingWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8F2FEB17F4E04D7D12523F /* Pods_CrossTrainingWorkout.framework */; };
-		B1387073A1FF4316D56658FE /* Pods_CrossTrainingWorkoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DFFA2784479B43B22C0C3C /* Pods_CrossTrainingWorkoutUITests.framework */; };
-		D997216A8E1E6F04F321EE52 /* Pods_CrossNoonTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC7684544B94624268A29CC /* Pods_CrossNoonTrainingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DCBBC282014EE2C0090EAD2 /* PBXContainerItemProxy */ = {
+		0D306B182191E41F003C4C2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0DCBBC0B2014EE2C0090EAD2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0DCBBC122014EE2C0090EAD2;
-			remoteInfo = CrossNoonTraining;
-		};
-		0DCBBC332014EE2C0090EAD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0DCBBC0B2014EE2C0090EAD2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DCBBC122014EE2C0090EAD2;
-			remoteInfo = CrossNoonTraining;
+			remoteInfo = CrossTrainingWorkout;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -115,6 +105,11 @@
 		0D306AE521919354003C4C2D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0D306AE721919778003C4C2D /* AppDependent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependent.swift; sourceTree = "<group>"; };
 		0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMockManager.swift; sourceTree = "<group>"; };
+		0D306AEC2191A7A3003C4C2D /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
+		0D306B132191E41F003C4C2D /* CrossTrainingWorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossTrainingWorkoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossTrainingWorkoutTests.swift; sourceTree = "<group>"; };
+		0D306B172191E41F003C4C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainer.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -127,8 +122,6 @@
 		0D63E297203B4E58009DF452 /* TheReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheReusableCell.swift; sourceTree = "<group>"; };
 		0D63E299203B4E82009DF452 /* FakeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeableCell.swift; sourceTree = "<group>"; };
 		0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiyingReadableDatabase.swift; sourceTree = "<group>"; };
-		0D6BC6F9218C556100209410 /* CrossTrainingWorkoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrossTrainingWorkoutFramework.h; sourceTree = "<group>"; };
-		0D6BC6FA218C556100209410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6C1504202617CC0063FE0D /* WodAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodAmrap.swift; sourceTree = "<group>"; };
 		0D6C1506202617D70063FE0D /* WodForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodForTime.swift; sourceTree = "<group>"; };
 		0D6C1508202617E00063FE0D /* WodEmom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodEmom.swift; sourceTree = "<group>"; };
@@ -152,12 +145,6 @@
 		0DCBBC1D2014EE2C0090EAD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DCBBC202014EE2C0090EAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DCBBC222014EE2C0090EAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DCBBC272014EE2C0090EAD2 /* CrossTrainingWorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossTrainingWorkoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DCBBC2B2014EE2C0090EAD2 /* CrossNoonTrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossNoonTrainingTests.swift; sourceTree = "<group>"; };
-		0DCBBC2D2014EE2C0090EAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DCBBC322014EE2C0090EAD2 /* CrossTrainingWorkoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossTrainingWorkoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DCBBC362014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossNoonTrainingUITests.swift; sourceTree = "<group>"; };
-		0DCBBC382014EE2C0090EAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDDC3FB201504F4001D0560 /* NoonPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NoonPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0DF2FFB421195CC800F3864F /* RealmEntityDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEntityDataHandler.swift; sourceTree = "<group>"; };
 		0DF2FFB621198F4000F3864F /* ResultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsExtension.swift; sourceTree = "<group>"; };
@@ -188,29 +175,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D306B102191E41F003C4C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DCBBC102014EE2C0090EAD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				87DC4DF92D1E41C8C9403553 /* Pods_CrossTrainingWorkout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DCBBC242014EE2C0090EAD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D997216A8E1E6F04F321EE52 /* Pods_CrossNoonTrainingTests.framework in Frameworks */,
-				7464891788BD3662E4C21DAE /* Pods_CrossTrainingWorkoutTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DCBBC2F2014EE2C0090EAD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42BE4F38B3F6F4791139C337 /* Pods_CrossNoonTrainingUITests.framework in Frameworks */,
-				B1387073A1FF4316D56658FE /* Pods_CrossTrainingWorkoutUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +280,7 @@
 				0DCBBC182014EE2C0090EAD2 /* ViewController.swift */,
 				0DCBBC1D2014EE2C0090EAD2 /* Assets.xcassets */,
 				0DCBBC222014EE2C0090EAD2 /* Info.plist */,
+				0D306AEC2191A7A3003C4C2D /* Localizations.swift */,
 				0D12940F2041BE46003CFA9B /* Localizable.strings */,
 			);
 			path = Supporting;
@@ -327,6 +304,15 @@
 				0D6C150A202617F10063FE0D /* WodFinisher.swift */,
 			);
 			path = Wod;
+			sourceTree = "<group>";
+		};
+		0D306B142191E41F003C4C2D /* CrossTrainingWorkoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */,
+				0D306B172191E41F003C4C2D /* Info.plist */,
+			);
+			path = CrossTrainingWorkoutTests;
 			sourceTree = "<group>";
 		};
 		0D63E2842039C301009DF452 /* Local */ = {
@@ -360,15 +346,6 @@
 			path = DatabaseKit;
 			sourceTree = "<group>";
 		};
-		0D6BC6F8218C556100209410 /* CrossTrainingWorkoutFramework */ = {
-			isa = PBXGroup;
-			children = (
-				0D6BC6F9218C556100209410 /* CrossTrainingWorkoutFramework.h */,
-				0D6BC6FA218C556100209410 /* Info.plist */,
-			);
-			path = CrossTrainingWorkoutFramework;
-			sourceTree = "<group>";
-		};
 		0D6C150C202619050063FE0D /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +365,7 @@
 				0D63E297203B4E58009DF452 /* TheReusableCell.swift */,
 				0D63E299203B4E82009DF452 /* FakeableCell.swift */,
 				0D306AD62190A169003C4C2D /* Transitionable.swift */,
+				0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -455,9 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				0DCBBC152014EE2C0090EAD2 /* CrossTrainingWorkout */,
-				0DCBBC2A2014EE2C0090EAD2 /* CrossTrainingWorkoutTests */,
-				0DCBBC352014EE2C0090EAD2 /* CrossTrainingWorkoutUITests */,
-				0D6BC6F8218C556100209410 /* CrossTrainingWorkoutFramework */,
+				0D306B142191E41F003C4C2D /* CrossTrainingWorkoutTests */,
 				0DCBBC142014EE2C0090EAD2 /* Products */,
 				FF12E072CA7570E11AC0B478 /* Pods */,
 				4EA259CE432FD4F0677C0252 /* Frameworks */,
@@ -468,8 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				0DCBBC132014EE2C0090EAD2 /* CrossTrainingWorkout.app */,
-				0DCBBC272014EE2C0090EAD2 /* CrossTrainingWorkoutTests.xctest */,
-				0DCBBC322014EE2C0090EAD2 /* CrossTrainingWorkoutUITests.xctest */,
+				0D306B132191E41F003C4C2D /* CrossTrainingWorkoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -491,24 +466,6 @@
 				0DF2FF9A21195C5400F3864F /* Vendors */,
 			);
 			path = CrossTrainingWorkout;
-			sourceTree = "<group>";
-		};
-		0DCBBC2A2014EE2C0090EAD2 /* CrossTrainingWorkoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				0DCBBC2B2014EE2C0090EAD2 /* CrossNoonTrainingTests.swift */,
-				0DCBBC2D2014EE2C0090EAD2 /* Info.plist */,
-			);
-			path = CrossTrainingWorkoutTests;
-			sourceTree = "<group>";
-		};
-		0DCBBC352014EE2C0090EAD2 /* CrossTrainingWorkoutUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0DCBBC362014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift */,
-				0DCBBC382014EE2C0090EAD2 /* Info.plist */,
-			);
-			path = CrossTrainingWorkoutUITests;
 			sourceTree = "<group>";
 		};
 		0DCBBC442014EE380090EAD2 /* Playground */ = {
@@ -597,11 +554,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D306B122191E41F003C4C2D /* CrossTrainingWorkoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D306B1A2191E41F003C4C2D /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutTests" */;
+			buildPhases = (
+				0D306B0F2191E41F003C4C2D /* Sources */,
+				0D306B102191E41F003C4C2D /* Frameworks */,
+				0D306B112191E41F003C4C2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D306B192191E41F003C4C2D /* PBXTargetDependency */,
+			);
+			name = CrossTrainingWorkoutTests;
+			productName = CrossTrainingWorkoutTests;
+			productReference = 0D306B132191E41F003C4C2D /* CrossTrainingWorkoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0DCBBC122014EE2C0090EAD2 /* CrossTrainingWorkout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DCBBC3B2014EE2C0090EAD2 /* Build configuration list for PBXNativeTarget "CrossTrainingWorkout" */;
 			buildPhases = (
 				67C8CE68A9EE102EC3EBE0AA /* [CP] Check Pods Manifest.lock */,
+				0D306AEB2191A5B3003C4C2D /* Translations */,
 				0DCBBC0F2014EE2C0090EAD2 /* Sources */,
 				0DCBBC102014EE2C0090EAD2 /* Frameworks */,
 				0DCBBC112014EE2C0090EAD2 /* Resources */,
@@ -617,68 +593,25 @@
 			productReference = 0DCBBC132014EE2C0090EAD2 /* CrossTrainingWorkout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0DCBBC262014EE2C0090EAD2 /* CrossTrainingWorkoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0DCBBC3E2014EE2C0090EAD2 /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutTests" */;
-			buildPhases = (
-				99DC7ABD6E49271DB82E2AC3 /* [CP] Check Pods Manifest.lock */,
-				0DCBBC232014EE2C0090EAD2 /* Sources */,
-				0DCBBC242014EE2C0090EAD2 /* Frameworks */,
-				0DCBBC252014EE2C0090EAD2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0DCBBC292014EE2C0090EAD2 /* PBXTargetDependency */,
-			);
-			name = CrossTrainingWorkoutTests;
-			productName = CrossNoonTrainingTests;
-			productReference = 0DCBBC272014EE2C0090EAD2 /* CrossTrainingWorkoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0DCBBC312014EE2C0090EAD2 /* CrossTrainingWorkoutUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0DCBBC412014EE2C0090EAD2 /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutUITests" */;
-			buildPhases = (
-				0028DA55752A40A07A6FBD17 /* [CP] Check Pods Manifest.lock */,
-				0DCBBC2E2014EE2C0090EAD2 /* Sources */,
-				0DCBBC2F2014EE2C0090EAD2 /* Frameworks */,
-				0DCBBC302014EE2C0090EAD2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0DCBBC342014EE2C0090EAD2 /* PBXTargetDependency */,
-			);
-			name = CrossTrainingWorkoutUITests;
-			productName = CrossNoonTrainingUITests;
-			productReference = 0DCBBC322014EE2C0090EAD2 /* CrossTrainingWorkoutUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0DCBBC0B2014EE2C0090EAD2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Nouveal;
 				TargetAttributes = {
+					0D306B122191E41F003C4C2D = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0DCBBC122014EE2C0090EAD2;
+					};
 					0DCBBC122014EE2C0090EAD2 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
-					};
-					0DCBBC262014EE2C0090EAD2 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0DCBBC122014EE2C0090EAD2;
-					};
-					0DCBBC312014EE2C0090EAD2 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0DCBBC122014EE2C0090EAD2;
 					};
 				};
 			};
@@ -697,13 +630,19 @@
 			projectRoot = "";
 			targets = (
 				0DCBBC122014EE2C0090EAD2 /* CrossTrainingWorkout */,
-				0DCBBC262014EE2C0090EAD2 /* CrossTrainingWorkoutTests */,
-				0DCBBC312014EE2C0090EAD2 /* CrossTrainingWorkoutUITests */,
+				0D306B122191E41F003C4C2D /* CrossTrainingWorkoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D306B112191E41F003C4C2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DCBBC112014EE2C0090EAD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -718,40 +657,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DCBBC252014EE2C0090EAD2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DCBBC302014EE2C0090EAD2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0028DA55752A40A07A6FBD17 /* [CP] Check Pods Manifest.lock */ = {
+		0D306AEB2191A5B3003C4C2D /* Translations */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+			inputFileListPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			inputPaths = (
+			);
+			name = Translations;
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CrossTrainingWorkoutUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${SRCROOT}/generateTranslations.sh\"\n";
 		};
 		67C8CE68A9EE102EC3EBE0AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -765,24 +690,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CrossTrainingWorkout-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99DC7ABD6E49271DB82E2AC3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CrossTrainingWorkoutTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -814,6 +721,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D306B0F2191E41F003C4C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DCBBC0F2014EE2C0090EAD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,8 +757,10 @@
 				0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */,
 				0D1294032041B65C003CFA9B /* UIColorExtensions.swift in Sources */,
 				0D6C1517202619A80063FE0D /* Resultable.swift in Sources */,
+				0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */,
 				0DF2FFBC2119902D00F3864F /* AthleteCell.swift in Sources */,
 				0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */,
+				0D306AED2191A7A3003C4C2D /* Localizations.swift in Sources */,
 				0D6C151A202619DB0063FE0D /* Movement.swift in Sources */,
 				0D306AE621919354003C4C2D /* App.swift in Sources */,
 				0D63E28E2039C37C009DF452 /* DeletableDatabase.swift in Sources */,
@@ -868,34 +785,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DCBBC232014EE2C0090EAD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DCBBC2C2014EE2C0090EAD2 /* CrossNoonTrainingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DCBBC2E2014EE2C0090EAD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DCBBC372014EE2C0090EAD2 /* CrossNoonTrainingUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0DCBBC292014EE2C0090EAD2 /* PBXTargetDependency */ = {
+		0D306B192191E41F003C4C2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0DCBBC122014EE2C0090EAD2 /* CrossTrainingWorkout */;
-			targetProxy = 0DCBBC282014EE2C0090EAD2 /* PBXContainerItemProxy */;
-		};
-		0DCBBC342014EE2C0090EAD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0DCBBC122014EE2C0090EAD2 /* CrossTrainingWorkout */;
-			targetProxy = 0DCBBC332014EE2C0090EAD2 /* PBXContainerItemProxy */;
+			targetProxy = 0D306B182191E41F003C4C2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -928,6 +824,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D306B1B2191E41F003C4C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5GBVVQ572;
+				INFOPLIST_FILE = CrossTrainingWorkoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jarnal.CrossTrainingWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossTrainingWorkout.app/CrossTrainingWorkout";
+			};
+			name = Debug;
+		};
+		0D306B1C2191E41F003C4C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5GBVVQ572;
+				INFOPLIST_FILE = CrossTrainingWorkoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jarnal.CrossTrainingWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossTrainingWorkout.app/CrossTrainingWorkout";
+			};
+			name = Release;
+		};
 		0DCBBC392014EE2C0090EAD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1077,79 +1012,18 @@
 			};
 			name = Release;
 		};
-		0DCBBC3F2014EE2C0090EAD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D352CFA937336BA9A54C5B8 /* Pods-CrossTrainingWorkoutTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5GBVVQ572;
-				INFOPLIST_FILE = CrossNoonTrainingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTrainingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossTrainingWorkout.app/CrossTrainingWorkout";
-			};
-			name = Debug;
-		};
-		0DCBBC402014EE2C0090EAD2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B13ADC552F8604859AC7FF66 /* Pods-CrossTrainingWorkoutTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5GBVVQ572;
-				INFOPLIST_FILE = CrossNoonTrainingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTrainingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossTrainingWorkout.app/CrossTrainingWorkout";
-			};
-			name = Release;
-		};
-		0DCBBC422014EE2C0090EAD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AE77A4811F499DA92725CF8 /* Pods-CrossTrainingWorkoutUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5GBVVQ572;
-				INFOPLIST_FILE = CrossNoonTrainingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTrainingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CrossNoonTraining;
-			};
-			name = Debug;
-		};
-		0DCBBC432014EE2C0090EAD2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 592770073B7BE6665A3EBCE8 /* Pods-CrossTrainingWorkoutUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5GBVVQ572;
-				INFOPLIST_FILE = CrossNoonTrainingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTrainingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CrossNoonTraining;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D306B1A2191E41F003C4C2D /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D306B1B2191E41F003C4C2D /* Debug */,
+				0D306B1C2191E41F003C4C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0DCBBC0E2014EE2C0090EAD2 /* Build configuration list for PBXProject "CrossTrainingWorkout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1164,24 +1038,6 @@
 			buildConfigurations = (
 				0DCBBC3C2014EE2C0090EAD2 /* Debug */,
 				0DCBBC3D2014EE2C0090EAD2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0DCBBC3E2014EE2C0090EAD2 /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0DCBBC3F2014EE2C0090EAD2 /* Debug */,
-				0DCBBC402014EE2C0090EAD2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0DCBBC412014EE2C0090EAD2 /* Build configuration list for PBXNativeTarget "CrossTrainingWorkoutUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0DCBBC422014EE2C0090EAD2 /* Debug */,
-				0DCBBC432014EE2C0090EAD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
