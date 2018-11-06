@@ -8,27 +8,8 @@
 
 import UIKit
 
-typealias CommonStateTransitionable = Debuggable & Loadable & Failable
-
-//****************************************************
-// MARK: - Transitionable
-//****************************************************
-
-protocol Transitionable: class {
-    var shownViewController: UIViewController? {get set}
-}
-
-extension Transitionable where Self: UIViewController & CommonStateTransitionable {
-    
-    /// ↔️ Transition to a new controller
-    ///
-    /// - Parameter newState: new state to set
-    func transition(toViewController controller: UIViewController) {
-        shownViewController?.remove()
-        
-        add(controller)
-        shownViewController = controller
-    }
+protocol CommonStateTransitionable: Debuggable, Loadable, Failable {}
+extension CommonStateTransitionable where Self: UIViewController {
     
     /// ↔️ Transition to a common shared state (debug, loading, failure)
     ///
@@ -45,15 +26,35 @@ extension Transitionable where Self: UIViewController & CommonStateTransitionabl
         }
         
     }
+}
+
+//****************************************************
+// MARK: - Transitionable
+//****************************************************
+
+protocol Transitionable: class, CommonStateTransitionable {
+    var shownViewController: UIViewController? {get set}
+}
+
+extension Transitionable where Self: UIViewController {
     
+    /// ↔️ Transition to a new controller
+    ///
+    /// - Parameter newState: new state to set
+    func transition(toViewController controller: UIViewController) {
+        shownViewController?.remove()
+        
+        add(controller)
+        shownViewController = controller
+    }
 }
 
 //****************************************************
 // MARK: - Debuggable
 //****************************************************
 
-protocol Debuggable: Transitionable {}
-extension Debuggable where Self: UIViewController & Transitionable {
+protocol Debuggable {}
+extension Debuggable where Self: UIViewController {
     
     /// ℹ️ Show debug screen with a specific message
     ///
@@ -77,8 +78,8 @@ extension Debuggable where Self: UIViewController & Transitionable {
 // MARK: - Loadable
 //****************************************************
 
-protocol Loadable: Transitionable {}
-extension Loadable where Self: UIViewController & Transitionable {
+protocol Loadable {}
+extension Loadable where Self: UIViewController {
     
     /// ⌛️ Show loading screen with a specific message
     ///
@@ -102,8 +103,8 @@ extension Loadable where Self: UIViewController & Transitionable {
 // MARK: - Failable
 //****************************************************
 
-protocol Failable: Transitionable {}
-extension Failable where Self: UIViewController & Transitionable {
+protocol Failable {}
+extension Failable where Self: UIViewController {
     
     /// ⚠️ Show failure screen with a specific message
     ///
