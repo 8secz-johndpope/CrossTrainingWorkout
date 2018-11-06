@@ -16,27 +16,6 @@ extension NotificationToken: NotifiyingToken {}
 typealias Database = ReadableDatabase & WrittableDatabase & DeletableDatabase
 typealias NotificationDatabase = ReadableDatabase & NotifiyingWrittableDatabase & DeletableDatabase
 
-//protocol StorableResults: NSFastEnumeration {
-//
-//    associatedtype Element
-//    func addObserver(_ block: @escaping () -> Void)
-//
-//}
-//extension Results: StorableResults {
-//
-//    func addObserver(_ block: @escaping () -> Void) {
-//
-//        let _ = self.observe { (changes: RealmCollectionChange) in
-//            switch changes {
-//            case .initial: break
-//            case .update(_, let deletions, let insertions, let modifications): break
-//            case .error(let error):
-//                fatalError("\(error)")
-//            }
-//        }
-//    }
-//}
-
 class DatabaseResults<T> {
     
     let results: [T]
@@ -48,67 +27,6 @@ class DatabaseResults<T> {
     }
     
 }
-
-//// T should be the result type
-//class Session<T> {
-//
-//    var wod: Wod<T>
-//    var date: Date!
-//    var results: [T]!
-//
-//    init<WodType: Wod<T>>(_ wod: WodType) {
-//        self.wod = wod
-//        self.results = [T]()
-//    }
-//}
-
-//protocol Foo {
-//    associatedtype Key
-//    associatedtype Element
-//}
-//
-//protocol Bar {
-//    associatedtype RawGeneratorType
-//}
-//
-//func example<T : Foo, U, V> (arg1: T, arg2: U, arg3: V) -> U where V : Foo, V : Bar, T.Key == V.RawGeneratorType, U == V.Element {
-//    // ...
-//}
-//
-//class WodS<T>: CustomStringConvertible {
-//
-//    var id: String!
-//    var name: String!
-//    var timeCap: TimeInterval!
-//    var resultType: T.Type {
-//        return T.self
-//    }
-//    var movements: [MovementConfiguration]?
-//
-//    var description: String {
-//        guard let name = name else { return "" }
-//        return "\(self) - \(name)"
-//    }
-//}
-//
-//protocol StorableResult {}
-//
-//class DatabaseResults<M>: StorableResult {
-//
-//    let realResult: M
-//
-//    init(_ result: M) {
-//        self.realResult = result
-//    }
-//}
-//
-//extension DatabaseResults where M: Results<Object> {
-//
-//    func testGoodResult() {
-//        print("StorableResults")
-//    }
-//
-//}
 
 extension Realm {
     
@@ -243,32 +161,6 @@ extension Realm: ReadableDatabase {
     
 }
 
-protocol NotifiyingReadableDatabase: ReadableDatabase {
-    
-    /// Observe a specific list of objects
-    ///
-    /// - Parameters:
-    ///   - objects: object list to observe
-    ///   - block: completion block to call on update
-    /// - Returns: token allowing to stop observing
-//    func observe<T: Storable>(_ objects: Results<T>, observerBlock block: @escaping (DatabaseCollectionChange) -> Void) -> NotifiyingToken
-    
-    /// Loads objects and subscribe for events on the retrieved objects
-    ///
-    /// - Parameters:
-    ///   - type:
-    ///   - query: <#query description#>
-    ///   - observeBlock: <#observeBlock description#>
-    /// - Returns: <#return value description#>
-    func loadObjects<T: Storable>(ofType type: T.Type, matching query: NSPredicate?, observeBlock: ( (DatabaseCollectionChange)->Void )? ) -> DatabaseResults<T>
-    
-    /// Invalidate a specific observer token
-    ///
-    /// - Parameter token: token to stop
-    func invalidateObserver(token: NotifiyingToken)
-    
-}
-
 enum DatabaseCollectionChange {
 
     case initial
@@ -289,12 +181,8 @@ extension Realm: NotifiyingReadableDatabase {
         return objects.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
-                
-//                print( Array(objects) )
                 block( .initial )
             case .update(_, let deletions, let insertions, let modifications):
-                
-//                print( Array(objects) )
                 block( .update(deletions: deletions, insertions: insertions, modifications: modifications) )
             case .error(let error):
                 block( .error(error) )
@@ -314,7 +202,6 @@ extension Realm: NotifiyingReadableDatabase {
         }
         
         let arrayResults = Array(results) as! [T]
-//        let testResult = DatabaseResults(withResults: arrayResults, andToken: nil)
         
         var token: NotifiyingToken?
         if let unwrappedObserveBlock = observeBlock {
