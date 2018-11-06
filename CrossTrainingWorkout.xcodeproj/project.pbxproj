@@ -15,6 +15,11 @@
 		0D12940D2041BE46003CFA9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D12940F2041BE46003CFA9B /* Localizable.strings */; };
 		0D1D9AEA2026173300C61CAC /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AE92026173300C61CAC /* Athlete.swift */; };
 		0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AED2026179300C61CAC /* Wod.swift */; };
+		0D306AD72190A169003C4C2D /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AD62190A169003C4C2D /* Transitionable.swift */; };
+		0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */; };
+		0D306AE621919354003C4C2D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE521919354003C4C2D /* App.swift */; };
+		0D306AE821919778003C4C2D /* AppDependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE721919778003C4C2D /* AppDependent.swift */; };
+		0D306AEA21919B93003C4C2D /* DatabaseMockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -26,6 +31,7 @@
 		0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E295203B4E41009DF452 /* TheNibLoadable.swift */; };
 		0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E297203B4E58009DF452 /* TheReusableCell.swift */; };
 		0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E299203B4E82009DF452 /* FakeableCell.swift */; };
+		0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */; };
 		0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1504202617CC0063FE0D /* WodAmrap.swift */; };
 		0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1506202617D70063FE0D /* WodForTime.swift */; };
 		0D6C1509202617E00063FE0D /* WodEmom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1508202617E00063FE0D /* WodEmom.swift */; };
@@ -41,6 +47,7 @@
 		0D6C15262026260D0063FE0D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C15252026260D0063FE0D /* History.storyboard */; };
 		0D6C1528202626150063FE0D /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C1527202626150063FE0D /* Team.storyboard */; };
 		0D6C152A2026261D0063FE0D /* Wod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C15292026261D0063FE0D /* Wod.storyboard */; };
+		0DB2D6A1219057CE0065A370 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2D6A0219057CE0065A370 /* Storyboards.swift */; };
 		0DCBBC172014EE2C0090EAD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBBC162014EE2C0090EAD2 /* AppDelegate.swift */; };
 		0DCBBC192014EE2C0090EAD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBBC182014EE2C0090EAD2 /* ViewController.swift */; };
 		0DCBBC1C2014EE2C0090EAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBBC1A2014EE2C0090EAD2 /* Main.storyboard */; };
@@ -55,7 +62,6 @@
 		0DF2FFC02119907200F3864F /* AhtleteEntityDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFBF2119907200F3864F /* AhtleteEntityDataHandler.swift */; };
 		0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */; };
 		0DF2FFC42119918C00F3864F /* ValidableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFC32119918C00F3864F /* ValidableTextField.swift */; };
-		0DF2FFCA2119A4EA00F3864F /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2FFC92119A4EA00F3864F /* AthletesViewController.swift */; };
 		0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */; };
 		42BE4F38B3F6F4791139C337 /* Pods_CrossNoonTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694F0E02CAB80B776DB326C /* Pods_CrossNoonTrainingUITests.framework */; };
 		7464891788BD3662E4C21DAE /* Pods_CrossTrainingWorkoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83260309D71B5871BF5479FB /* Pods_CrossTrainingWorkoutTests.framework */; };
@@ -81,6 +87,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0D6BC703218C556100209410 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D043FCA20A9F4CF00D6226C /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		0D043FCC20A9F50000D6226C /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -91,6 +110,11 @@
 		0D1294102041BE62003CFA9B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D1D9AE92026173300C61CAC /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		0D1D9AED2026179300C61CAC /* Wod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wod.swift; sourceTree = "<group>"; };
+		0D306AD62190A169003C4C2D /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
+		0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonControllerState.swift; sourceTree = "<group>"; };
+		0D306AE521919354003C4C2D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		0D306AE721919778003C4C2D /* AppDependent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependent.swift; sourceTree = "<group>"; };
+		0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMockManager.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -102,6 +126,9 @@
 		0D63E295203B4E41009DF452 /* TheNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheNibLoadable.swift; sourceTree = "<group>"; };
 		0D63E297203B4E58009DF452 /* TheReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheReusableCell.swift; sourceTree = "<group>"; };
 		0D63E299203B4E82009DF452 /* FakeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeableCell.swift; sourceTree = "<group>"; };
+		0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiyingReadableDatabase.swift; sourceTree = "<group>"; };
+		0D6BC6F9218C556100209410 /* CrossTrainingWorkoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrossTrainingWorkoutFramework.h; sourceTree = "<group>"; };
+		0D6BC6FA218C556100209410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6C1504202617CC0063FE0D /* WodAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodAmrap.swift; sourceTree = "<group>"; };
 		0D6C1506202617D70063FE0D /* WodForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodForTime.swift; sourceTree = "<group>"; };
 		0D6C1508202617E00063FE0D /* WodEmom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodEmom.swift; sourceTree = "<group>"; };
@@ -117,6 +144,7 @@
 		0D6C15252026260D0063FE0D /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		0D6C1527202626150063FE0D /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		0D6C15292026261D0063FE0D /* Wod.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wod.storyboard; sourceTree = "<group>"; };
+		0DB2D6A0219057CE0065A370 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		0DCBBC132014EE2C0090EAD2 /* CrossTrainingWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossTrainingWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCBBC162014EE2C0090EAD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCBBC182014EE2C0090EAD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +166,6 @@
 		0DF2FFBF2119907200F3864F /* AhtleteEntityDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhtleteEntityDataHandler.swift; sourceTree = "<group>"; };
 		0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAthleteViewController.swift; sourceTree = "<group>"; };
 		0DF2FFC32119918C00F3864F /* ValidableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextField.swift; sourceTree = "<group>"; };
-		0DF2FFC92119A4EA00F3864F /* AthletesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesViewController.swift; sourceTree = "<group>"; };
 		0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
 		22495EFF72B6546FF8137BB1 /* Pods-CrossNoonTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossNoonTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossNoonTrainingUITests/Pods-CrossNoonTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		229DFF0603DBFC4552147835 /* Pods-CrossTrainingWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossTrainingWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossTrainingWorkout/Pods-CrossTrainingWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +280,8 @@
 		0D1D9AE52026163200C61CAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0D306AE521919354003C4C2D /* App.swift */,
+				0D306AE721919778003C4C2D /* AppDependent.swift */,
 				0D63E2852039C32B009DF452 /* Api */,
 				0D63E2842039C301009DF452 /* Local */,
 				0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */,
@@ -306,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				0D63E2922039C467009DF452 /* Database */,
+				0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -326,8 +356,18 @@
 				0D63E2882039C37C009DF452 /* DeletableDatabase.swift */,
 				0D63E2862039C37C009DF452 /* NotifiyingToken.swift */,
 				0D63E2872039C37C009DF452 /* Storable.swift */,
+				0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		0D6BC6F8218C556100209410 /* CrossTrainingWorkoutFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0D6BC6F9218C556100209410 /* CrossTrainingWorkoutFramework.h */,
+				0D6BC6FA218C556100209410 /* Info.plist */,
+			);
+			path = CrossTrainingWorkoutFramework;
 			sourceTree = "<group>";
 		};
 		0D6C150C202619050063FE0D /* Result */ = {
@@ -348,6 +388,7 @@
 				0D63E295203B4E41009DF452 /* TheNibLoadable.swift */,
 				0D63E297203B4E58009DF452 /* TheReusableCell.swift */,
 				0D63E299203B4E82009DF452 /* FakeableCell.swift */,
+				0D306AD62190A169003C4C2D /* Transitionable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -402,12 +443,22 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		0DB2D69F219057BF0065A370 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				0DB2D6A0219057CE0065A370 /* Storyboards.swift */,
+				0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		0DCBBC0A2014EE2C0090EAD2 = {
 			isa = PBXGroup;
 			children = (
 				0DCBBC152014EE2C0090EAD2 /* CrossTrainingWorkout */,
 				0DCBBC2A2014EE2C0090EAD2 /* CrossTrainingWorkoutTests */,
 				0DCBBC352014EE2C0090EAD2 /* CrossTrainingWorkoutUITests */,
+				0D6BC6F8218C556100209410 /* CrossTrainingWorkoutFramework */,
 				0DCBBC142014EE2C0090EAD2 /* Products */,
 				FF12E072CA7570E11AC0B478 /* Pods */,
 				4EA259CE432FD4F0677C0252 /* Frameworks */,
@@ -427,6 +478,7 @@
 		0DCBBC152014EE2C0090EAD2 /* CrossTrainingWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				0DB2D69F219057BF0065A370 /* Enum */,
 				0D1294012041B647003CFA9B /* Extension */,
 				0DF4C01A202C723600CCAEEC /* Fixtures */,
 				0D6C1515202619800063FE0D /* Protocol */,
@@ -480,7 +532,6 @@
 			children = (
 				0DF2FFBA2119901500F3864F /* View */,
 				0DF2FFB921198FC600F3864F /* Data */,
-				0DF2FFC92119A4EA00F3864F /* AthletesViewController.swift */,
 				0D63E2932039C886009DF452 /* AthletesListViewController.swift */,
 				0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */,
 			);
@@ -555,6 +606,7 @@
 				0DCBBC102014EE2C0090EAD2 /* Frameworks */,
 				0DCBBC112014EE2C0090EAD2 /* Resources */,
 				E1C73E17A3D77EF4271EDAE0 /* [CP] Embed Pods Frameworks */,
+				0D6BC703218C556100209410 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -768,11 +820,12 @@
 			files = (
 				0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */,
 				0D63E2942039C886009DF452 /* AthletesListViewController.swift in Sources */,
+				0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */,
 				0D6C150E2026191E0063FE0D /* Result.swift in Sources */,
 				0DCBBC192014EE2C0090EAD2 /* ViewController.swift in Sources */,
+				0D306AE821919778003C4C2D /* AppDependent.swift in Sources */,
 				0D6C1509202617E00063FE0D /* WodEmom.swift in Sources */,
 				0D63E28D2039C37C009DF452 /* Storable.swift in Sources */,
-				0DF2FFCA2119A4EA00F3864F /* AthletesViewController.swift in Sources */,
 				0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */,
 				0D6C15102026192F0063FE0D /* RoundResult.swift in Sources */,
 				0DF2FFB521195CC800F3864F /* RealmEntityDataHandler.swift in Sources */,
@@ -790,8 +843,13 @@
 				0D1294032041B65C003CFA9B /* UIColorExtensions.swift in Sources */,
 				0D6C1517202619A80063FE0D /* Resultable.swift in Sources */,
 				0DF2FFBC2119902D00F3864F /* AthleteCell.swift in Sources */,
+				0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */,
 				0D6C151A202619DB0063FE0D /* Movement.swift in Sources */,
+				0D306AE621919354003C4C2D /* App.swift in Sources */,
 				0D63E28E2039C37C009DF452 /* DeletableDatabase.swift in Sources */,
+				0D306AEA21919B93003C4C2D /* DatabaseMockManager.swift in Sources */,
+				0D306AD72190A169003C4C2D /* Transitionable.swift in Sources */,
+				0DB2D6A1219057CE0065A370 /* Storyboards.swift in Sources */,
 				0D6C151E20261AA90063FE0D /* Session.swift in Sources */,
 				0D63E28F2039C37C009DF452 /* NotifiyingWrittableDatabase.swift in Sources */,
 				0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */,
@@ -987,6 +1045,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F5F19380E95730C276CAE19 /* Pods-CrossTrainingWorkout.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
@@ -1004,6 +1063,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 229DFF0603DBFC4552147835 /* Pods-CrossTrainingWorkout.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
