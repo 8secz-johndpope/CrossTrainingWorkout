@@ -10,8 +10,9 @@ import Foundation
 
 enum ValidatedData {
     
-    case valid
+    case valid(String)
     case invalid(String)
+    case empty(String)
 }
 
 enum InputValidator {
@@ -27,33 +28,38 @@ enum InputValidator {
     case minchars(Int)
     case digitsOnly
     case postalCode(Int)
-    case passwordResetCode
     case password(Int)
+    case passwordCorrespondance
+    case firstname
     
     //****************************************************
     // MARK: - Public variables
     //****************************************************
     
     /// Error message
-    public var errorMessage: String {
+    public var title: String? {
         switch self {
         case .postalCode:
-            return "Localizations.InputValidation.Address.PostalCode.Invalid"
+            return Localizations.InputValidation.Address.PostalCode.Title
         case .phoneNumber:
-            return "Localizations.InputValidation.PhoneNumber.Invalid"
+            return Localizations.InputValidation.PhoneNumber.Title
         case .email:
-            return "Localizations.InputValidation.Email.Invalid"
-        case .city:
-            return "Localizations.InputValidation.Address.City.Invalid"
-        case .passwordResetCode:
-            return "Localizations.InputValidation.PasswordCode.Invalid"
+            return Localizations.InputValidation.Email.Title
         case .password:
-            return "Localizations.InputValidation.Password.Invalid"
-        case .minchars(let minSize):
-            return "Sould be at least \(minSize)"
+            return Localizations.InputValidation.Password.Title
+        case .firstname:
+            return Localizations.InputValidation.Firstname.Title
         default:
-            return ""
+            return nil
         }
+    }
+    
+    public var invalidMessage: String {
+        return Localizations.InputValidation.Status.Invalid(title ?? Localizations.InputValidation.Default.Title)
+    }
+    
+    public var emptyMessage: String {
+        return Localizations.InputValidation.Status.Empty(title ?? Localizations.InputValidation.Default.Title)
     }
     
     //****************************************************
@@ -66,14 +72,14 @@ enum InputValidator {
     /// - Returns: .valid or .invalid(errorMessages)
     public func validate(value: String?) -> ValidatedData {
         
-        if let unwrappedValue = value, value != "" {
+        if let unwrappedValue = value, unwrappedValue.isEmpty == false {
             if validator(unwrappedValue) {
-                return .valid
+                return .valid(unwrappedValue)
             } else {
-                return .invalid(self.errorMessage)
+                return .invalid(invalidMessage)
             }
         }
-        return .invalid(self.errorMessage)
+        return .empty(emptyMessage)
     }
     
     //****************************************************
@@ -85,14 +91,14 @@ enum InputValidator {
         switch self {
         case .minchars(let charNumber), .city(let charNumber), .password(let charNumber):
             return { $0.count >= charNumber }
+        case .firstname:
+            return { $0.count >= 3 }
         case .postalCode(let charNumber):
             return { $0.capturedGroups(withRegex: "^([0-9]{\(charNumber)})$").count == 1 }
         case .phoneNumber:
             return { $0.capturedGroups(withRegex: "^([0-9]{10,15})$").count == 1 }
         case .email:
             return { $0.capturedGroups(withRegex: "^([A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,})$").count == 1 }
-        case .passwordResetCode:
-            return { $0.count >= 6 }
         default:
             print("Validator not implemented for \(self)")
             return { _ in false }

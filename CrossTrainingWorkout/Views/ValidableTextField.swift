@@ -12,10 +12,15 @@ class ValidableTextField: UITextField {
     
     var validator: InputValidator?
     
+    var validationStatus: ValidatedData = .invalid(Localizations.InputValidation.NotValidated)
+    
     func validate() -> ValidatedData {
         
         guard let validator = self.validator else { fatalError("Trying to validate without any validator set") }
-        return validator.validate(value: self.text)
+        
+        let validatedData = validator.validate(value: self.text)
+        validationStatus = validatedData
+        return validatedData
     }
     
 }

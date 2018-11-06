@@ -7,16 +7,37 @@
 //
 
 import UIKit
-import RealmSwift
 
-protocol NewAthleteViewControllerDelegate: class {}
+struct NewAthleteLogicController: AppDependent, ValidableTextFieldContainer {
+    
+    /// 🏭 Builds an user
+    ///
+    /// - Parameters:
+    ///   - firstname: firstname of the user
+    ///   - email: email of the user
+    /// - Returns: Athlete model
+    public func buildUser(withFirstName firstname: String, andEmail email: String) -> Athlete {
+        
+        let athlete = Athlete()
+        athlete.id = UUID().uuidString
+        athlete.firstName = firstname
+        athlete.email = email
+        
+        return athlete
+    }
+    
+}
 
-class NewAthleteViewController: UIViewController {
+class NewAthleteViewController: UIViewController, CommonStateTransitionable {
+    
+    // **************************************************************
+    // MARK: - Outlets
+    // **************************************************************
     
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var nickNameInputTextField: ValidableTextField! {
         didSet {
-            nickNameInputTextField.validator = .minchars(2)
+            nickNameInputTextField.validator = .firstname
         }
     }
     
@@ -27,38 +48,50 @@ class NewAthleteViewController: UIViewController {
         }
     }
     
-    weak var delegate: NewAthleteViewControllerDelegate?
+    private var logicController: NewAthleteLogicController!
     
     var dutyEndedBlock: ( (Error?) -> Void )?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        logicController = NewAthleteLogicController()
+    }
+    
+    // **************************************************************
+    // MARK: - User Interaction
+    // **************************************************************
+    
+    /// 👆 Handles when user submit the data
+    ///
+    /// - Parameter sender: _
     @IBAction func submit(_ sender: Any) {
         
-        let tests: [ValidableTextField] = [nickNameInputTextField, emailInputTextField]
+        view.endEditing(true)
         
-        var errors: [String] = []
-        for test in tests {
-            switch test.validate() {
-            case .valid: continue
-            case .invalid(let error):
-                errors.append(error)
-            }
+        let textfields: [ValidableTextField] = [nickNameInputTextField, emailInputTextField]
+        
+        if let errorString = logicController.validateGlobally(textfields: textfields) {
+            transition(toCommonState: .failure(errorString))
+            return
         }
         
-        let athlete = Athlete()
-        athlete.id = UUID().uuidString
-        athlete.firstName = nickNameInputTextField.text!
-        athlete.email = emailInputTextField.text!
+        let athlete = logicController.buildUser(withFirstName: nickNameInputTextField.text!, andEmail: emailInputTextField.text!)
         
-        let realm = try! Realm()
-        try! realm.safeWrite(withoutNotifying: []) {
-            realm.add(athlete)
-            print(athlete)
+        do {
+            try logicController.database.save(athlete, updateIfExisting: false)
+        } catch {
+            transition(toCommonState: .failure(error.localizedDescription))
         }
         
         dutyEndedBlock?(nil)
     }
     
+    /// 👆 Handles when user cancels input
+    ///
+    /// - Parameter sender: _
     @IBAction func cancel(_ sender: Any) {
+        view.endEditing(true)
         dutyEndedBlock?(nil)
     }
 }
