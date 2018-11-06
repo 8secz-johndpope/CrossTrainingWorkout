@@ -284,8 +284,6 @@
 				0D306AE721919778003C4C2D /* AppDependent.swift */,
 				0D63E2852039C32B009DF452 /* Api */,
 				0D63E2842039C301009DF452 /* Local */,
-				0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */,
-				0DF2FFB421195CC800F3864F /* RealmEntityDataHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,7 +332,8 @@
 		0D63E2842039C301009DF452 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				0D63E2922039C467009DF452 /* Database */,
+				0DF4C01B2030B52900CCAEEC /* RealmDatabase.swift */,
+				0DF2FFB421195CC800F3864F /* RealmEntityDataHandler.swift */,
 				0D306AE921919B93003C4C2D /* DatabaseMockManager.swift */,
 			);
 			path = Local;
@@ -347,7 +346,7 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		0D63E2922039C467009DF452 /* Database */ = {
+		0D63E2922039C467009DF452 /* DatabaseKit */ = {
 			isa = PBXGroup;
 			children = (
 				0D63E28B2039C37C009DF452 /* ReadableDatabase.swift */,
@@ -358,7 +357,7 @@
 				0D63E2872039C37C009DF452 /* Storable.swift */,
 				0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */,
 			);
-			path = Database;
+			path = DatabaseKit;
 			sourceTree = "<group>";
 		};
 		0D6BC6F8218C556100209410 /* CrossTrainingWorkoutFramework */ = {
@@ -523,6 +522,7 @@
 		0DF2FF9A21195C5400F3864F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				0D63E2922039C467009DF452 /* DatabaseKit */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
