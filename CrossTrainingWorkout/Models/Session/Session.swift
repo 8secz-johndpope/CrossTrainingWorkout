@@ -56,13 +56,13 @@ class SessionAmrap: Session {
 }
 
 class SessionFinisher: Session {
-    typealias T = RoundResult
+    typealias T = TimeResult
 }
 
 class SessionForTime: Session {
-    typealias T = RoundResult
+    typealias T = TimeResult
 }
 
 class SessionEmom: Session {
-    typealias T = RoundResult
+    typealias T = EmomResult
 }
