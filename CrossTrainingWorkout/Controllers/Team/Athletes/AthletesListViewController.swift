@@ -33,6 +33,7 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
     enum AthletesListViewControllerState {
         case consulting
         case newAthlete
+        case results
     }
     
     // **************************************************************
@@ -80,8 +81,12 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
+        navigationItem.backBarButtonItem?.title = ""
         if let newAthleteVC = segue.destination as? NewAthleteViewController {
+            
+            newAthleteVC.navigationItem.title = "^d pzeddzed"
+            
+            segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
             newAthleteVC.dutyEndedBlock = { (_) in
                 
                 DispatchQueue.main.async {
@@ -100,7 +105,6 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
     
     /// 🚧 Setting up controller
     private func setup() {
-        view.backgroundColor = UIColor(hexString: "#5B708A")
         
         logicController = AthletesListLogicController(tableView: self.tableView)
         tableView.delegate = self
@@ -116,7 +120,7 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
     /// 🔄 Update table view insets
     private func updateTableViewInsets() {
         
-        let height = max(addButtonContainer.frame.height, newAthleteViewContainer.frame.height)
+        let height = max(addButtonContainer.frame.height + 10, newAthleteViewContainer.frame.height)
         tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -height)
     }
@@ -131,13 +135,19 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
         switch state {
         case .consulting:
             heightConstraint?.isActive = true
+            UIView.animate(withDuration: animate ? 0.3 : 0, animations: {
+                self.view.layoutIfNeeded()
+            })
         case .newAthlete:
             heightConstraint?.isActive = false
+            UIView.animate(withDuration: animate ? 0.3 : 0, animations: {
+                self.view.layoutIfNeeded()
+            })
+        case .results:
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "resultsSegue", sender: nil)
+            }
         }
-        
-        UIView.animate(withDuration: animate ? 0.3 : 0, animations: {
-            self.view.layoutIfNeeded()
-        })
     }
     
     // **************************************************************
@@ -155,7 +165,7 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
 extension AthletesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        transition(toCommonState: .debug("didSelectRowAt"))
+        transition(to: .results)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -174,11 +184,7 @@ extension AthletesListViewController: UITableViewDelegate {
             }
         }
         
-        let showResultsAction = UITableViewRowAction(style: .default, title: "Résultats") { (action, indexPath) in
-            print("showResultsAction")
-        }
-        
-        return [showResultsAction, deleteAction]
+        return [deleteAction]
     }
     
 }

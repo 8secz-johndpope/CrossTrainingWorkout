@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ut-m2-t8z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orU-VC-HbH">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,10 +71,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQf-Ap-Y96">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uP-rI-lK2" customClass="RoundedCornerButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="5" width="335" height="50"/>
+                                        <rect key="frame" x="20" y="10" width="335" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Ajouter un sportif">
@@ -86,7 +87,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4uP-rI-lK2" secondAttribute="trailing" constant="20" id="Lwc-Ae-ufR"/>
-                                    <constraint firstItem="4uP-rI-lK2" firstAttribute="top" secondItem="bQf-Ap-Y96" secondAttribute="top" constant="5" id="XCD-Z1-AHN"/>
+                                    <constraint firstItem="4uP-rI-lK2" firstAttribute="top" secondItem="bQf-Ap-Y96" secondAttribute="top" constant="10" id="XCD-Z1-AHN"/>
                                     <constraint firstAttribute="height" constant="60" id="hTm-PO-2Ac"/>
                                     <constraint firstAttribute="bottom" secondItem="4uP-rI-lK2" secondAttribute="bottom" constant="5" id="jRQ-8v-UFc"/>
                                     <constraint firstItem="4uP-rI-lK2" firstAttribute="leading" secondItem="bQf-Ap-Y96" secondAttribute="leading" constant="20" id="zil-DZ-DLl"/>
@@ -102,9 +103,9 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.41960784309999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="screen_background"/>
                         <constraints>
-                            <constraint firstItem="bQf-Ap-Y96" firstAttribute="top" secondItem="g3x-r8-bex" secondAttribute="top" id="NE4-Yh-IQz"/>
+                            <constraint firstItem="bQf-Ap-Y96" firstAttribute="top" secondItem="g3x-r8-bex" secondAttribute="top" constant="10" id="NE4-Yh-IQz"/>
                             <constraint firstItem="8hc-LD-3eJ" firstAttribute="bottom" secondItem="g3x-r8-bex" secondAttribute="bottom" id="QSs-3N-N43"/>
                             <constraint firstItem="bQf-Ap-Y96" firstAttribute="trailing" secondItem="g3x-r8-bex" secondAttribute="trailing" id="QsI-Wm-GjM"/>
                             <constraint firstItem="gnm-e1-940" firstAttribute="top" secondItem="g3x-r8-bex" secondAttribute="top" id="Ssq-2A-dBG"/>
@@ -117,7 +118,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3x-r8-bex"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Team" id="3sb-oz-PQd"/>
+                    <tabBarItem key="tabBarItem" title="Team" image="team" id="3sb-oz-PQd"/>
                     <navigationItem key="navigationItem" title="TEAM" largeTitleDisplayMode="never" id="lRd-t7-b32"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -125,6 +126,7 @@
                         <outlet property="addButtonContainer" destination="bQf-Ap-Y96" id="0zl-RH-Rpa"/>
                         <outlet property="newAthleteViewContainer" destination="gnm-e1-940" id="pFh-7a-Sbl"/>
                         <outlet property="tableView" destination="8hc-LD-3eJ" id="aJz-S9-1kC"/>
+                        <segue destination="4Ut-m2-t8z" kind="show" identifier="resultsSegue" id="SMq-yo-8ft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ata-pL-j44" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,9 +156,9 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g47-Ad-qs7" customClass="ValidableTextField" customModule="CrossTrainingWorkout" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="23.333333333333336" width="355" height="30"/>
                                                 <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -172,9 +174,9 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPk-V3-1Mn" customClass="ValidableTextField" customModule="CrossTrainingWorkout" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="23.333333333333343" width="355" height="30"/>
                                                 <color key="backgroundColor" red="0.25098039220000001" green="0.31372549020000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -231,19 +233,20 @@
             </objects>
             <point key="canvasLocation" x="609" y="-171"/>
         </scene>
-        <!--View Controller-->
+        <!--HISTORY-->
         <scene sceneID="jKp-6r-G6q">
             <objects>
-                <viewController id="4Ut-m2-t8z" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LK2-dp-mtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4Ut-m2-t8z" customClass="AthletesResultsViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P1M-PW-wj0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="753" translatesAutoresizingMaskIntoConstraints="NO" id="0C5-hv-lMC">
-                                <rect key="frame" x="20" y="63.999999999999986" width="335" height="143.66666666666663"/>
+                                <rect key="frame" x="20" y="20" width="335" height="143.66666666666666"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="results_branch" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-mC-WVR">
-                                        <rect key="frame" x="62" y="29.666666666666671" width="211" height="114.00000000000001"/>
+                                        <rect key="frame" x="62" y="29.666666666666657" width="211" height="114"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de WOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYp-Td-Rvn">
                                         <rect key="frame" x="98.666666666666686" y="0.0" width="138" height="21.666666666666668"/>
@@ -252,7 +255,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFf-7m-kX2">
-                                        <rect key="frame" x="129.66666666666666" y="29.666666666666671" width="76" height="72"/>
+                                        <rect key="frame" x="129.66666666666666" y="29.666666666666657" width="76" height="72"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -271,9 +274,9 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaI-Bj-axd">
-                                <rect key="frame" x="0.0" y="227.66666666666669" width="375" height="241.66666666666669"/>
+                                <rect key="frame" x="0.0" y="193.66666666666669" width="375" height="241.66666666666669"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-2A-KlH">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-2A-KlH" customClass="AthleteSessionResultsCountView" customModule="CrossTrainingWorkout" customModuleProvider="target">
                                         <rect key="frame" x="10" y="8" width="172.66666666666666" height="109"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fo8-ao-D8D">
@@ -284,13 +287,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMRAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWx-5a-6az">
-                                                <rect key="frame" x="91" y="31.000000000000028" width="61.666666666666657" height="22"/>
+                                                <rect key="frame" x="91" y="31" width="61.666666666666657" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="108" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxE-gh-6Dw">
-                                                <rect key="frame" x="85" y="53.000000000000028" width="67.666666666666686" height="48"/>
+                                                <rect key="frame" x="85" y="53" width="67.666666666666686" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -307,8 +310,13 @@
                                             <constraint firstAttribute="trailing" secondItem="Fo8-ao-D8D" secondAttribute="trailing" constant="20" id="xXf-VY-BlL"/>
                                             <constraint firstItem="PxE-gh-6Dw" firstAttribute="top" secondItem="hWx-5a-6az" secondAttribute="bottom" id="zU2-99-b67"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="resultTypeLable" destination="hWx-5a-6az" id="WCB-VS-4Fp"/>
+                                            <outlet property="resultsCount" destination="PxE-gh-6Dw" id="HLr-vU-hCH"/>
+                                            <outlet property="topLine" destination="Fo8-ao-D8D" id="q9W-pf-Qsz"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-YF-sxz">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-YF-sxz" customClass="AthleteSessionResultsCountView" customModule="CrossTrainingWorkout" customModuleProvider="target">
                                         <rect key="frame" x="192.66666666666663" y="8" width="172.33333333333337" height="109"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQh-U2-T8m">
@@ -319,13 +327,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finisher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcj-Ku-IgP">
-                                                <rect key="frame" x="88.333333333333343" y="31.000000000000028" width="64" height="22"/>
+                                                <rect key="frame" x="88.333333333333343" y="31" width="64" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="108" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTj-8X-aeB">
-                                                <rect key="frame" x="85.000000000000028" y="53.000000000000028" width="67.333333333333343" height="48"/>
+                                                <rect key="frame" x="85.000000000000028" y="53" width="67.333333333333343" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -342,9 +350,14 @@
                                             <constraint firstAttribute="trailing" secondItem="bQh-U2-T8m" secondAttribute="trailing" constant="20" id="d1w-qg-wkB"/>
                                             <constraint firstItem="bQh-U2-T8m" firstAttribute="top" secondItem="kSA-YF-sxz" secondAttribute="top" constant="20" id="zaL-4K-K09"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="resultTypeLable" destination="bcj-Ku-IgP" id="VwD-8c-DYK"/>
+                                            <outlet property="resultsCount" destination="7uE-J9-tVG" id="72E-CA-Bbb"/>
+                                            <outlet property="topLine" destination="bQh-U2-T8m" id="x7d-gQ-stS"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-Bj-Fgh">
-                                        <rect key="frame" x="10" y="124.66666666666666" width="172.66666666666666" height="109"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-Bj-Fgh" customClass="AthleteSessionResultsCountView" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="124.66666666666663" width="172.66666666666666" height="109"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pei-EG-qo4">
                                                 <rect key="frame" x="20" y="20" width="132.66666666666666" height="4"/>
@@ -377,9 +390,14 @@
                                             <constraint firstItem="pei-EG-qo4" firstAttribute="leading" secondItem="aAe-Bj-Fgh" secondAttribute="leading" constant="20" id="cG6-x0-ZxP"/>
                                             <constraint firstItem="ipH-lA-T7F" firstAttribute="trailing" secondItem="1Ic-yt-vAj" secondAttribute="trailing" id="y2h-0a-eJP"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="resultTypeLable" destination="1Ic-yt-vAj" id="2qz-3h-VPv"/>
+                                            <outlet property="resultsCount" destination="ipH-lA-T7F" id="EQm-qS-n8w"/>
+                                            <outlet property="topLine" destination="pei-EG-qo4" id="O0i-WA-dwd"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvx-fK-MWI">
-                                        <rect key="frame" x="192.66666666666663" y="124.66666666666666" width="172.33333333333337" height="109"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvx-fK-MWI" customClass="AthleteSessionResultsCountView" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                        <rect key="frame" x="192.66666666666663" y="124.66666666666663" width="172.33333333333337" height="109"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-xq-Y5h">
                                                 <rect key="frame" x="20" y="20" width="132.33333333333334" height="4"/>
@@ -412,6 +430,11 @@
                                             <constraint firstItem="flA-cx-l7o" firstAttribute="top" secondItem="pZp-xq-Y5h" secondAttribute="bottom" constant="7" id="xUq-0A-nBO"/>
                                             <constraint firstAttribute="trailing" secondItem="pZp-xq-Y5h" secondAttribute="trailing" constant="20" id="ygF-xm-L1z"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="resultTypeLable" destination="flA-cx-l7o" id="jTN-gi-dPF"/>
+                                            <outlet property="resultsCount" destination="QTj-8X-aeB" id="T78-bi-C6G"/>
+                                            <outlet property="topLine" destination="pZp-xq-Y5h" id="FT8-gG-tWw"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -432,9 +455,9 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.14901960784313725" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="screen_background"/>
                         <constraints>
-                            <constraint firstItem="QaI-Bj-axd" firstAttribute="top" secondItem="0C5-hv-lMC" secondAttribute="bottom" constant="20" id="FzP-JD-8Wm"/>
+                            <constraint firstItem="QaI-Bj-axd" firstAttribute="top" secondItem="0C5-hv-lMC" secondAttribute="bottom" constant="30" id="FzP-JD-8Wm"/>
                             <constraint firstAttribute="trailing" secondItem="QaI-Bj-axd" secondAttribute="trailing" id="GJ1-R2-wyo"/>
                             <constraint firstItem="0C5-hv-lMC" firstAttribute="leading" secondItem="PUP-e8-HF1" secondAttribute="leading" constant="20" id="J65-7C-maW"/>
                             <constraint firstItem="0C5-hv-lMC" firstAttribute="top" secondItem="PUP-e8-HF1" secondAttribute="top" constant="20" id="KCA-Fn-hYq"/>
@@ -443,13 +466,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PUP-e8-HF1"/>
                     </view>
+                    <navigationItem key="navigationItem" title="HISTORY" id="IyY-8B-nE2"/>
+                    <connections>
+                        <outlet property="amrapView" destination="hxw-2A-KlH" id="nbh-xM-Srj"/>
+                        <outlet property="emomResults" destination="Bvx-fK-MWI" id="5s2-1v-KX9"/>
+                        <outlet property="finisherView" destination="kSA-YF-sxz" id="hhC-FK-CtO"/>
+                        <outlet property="forTimeView" destination="aAe-Bj-Fgh" id="dt6-XD-Fmx"/>
+                        <outlet property="totalWodNumber" destination="vFf-7m-kX2" id="Odh-RI-j77"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LK2-dp-mtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381.5999999999999" y="18.472906403940886"/>
+            <point key="canvasLocation" x="-180" y="719"/>
         </scene>
     </scenes>
     <resources>
         <image name="results_branch" width="211" height="114"/>
+        <image name="team" width="32" height="24"/>
+        <namedColor name="screen_background">
+            <color red="0.25499999523162842" green="0.31400001049041748" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

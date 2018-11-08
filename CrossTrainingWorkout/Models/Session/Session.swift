@@ -66,3 +66,30 @@ class SessionForTime: Session {
 class SessionEmom: Session {
     typealias T = EmomResult
 }
+
+enum SessionType: String {
+    
+    case amrap
+    case forTime
+    case emom
+    case finisher
+    
+    var color: UIColor {
+        
+        guard let color = UIColor(named: String(describing: self.rawValue)) else { fatalError("No color defined for this type") }
+        return color
+    }
+    
+    var title: String {
+        switch self {
+        case .amrap:
+            return "AMRAP"
+        case .forTime:
+            return "For time"
+        case .emom:
+            return "EMOM"
+        case .finisher:
+            return "Finisher"
+        }
+    }
+}

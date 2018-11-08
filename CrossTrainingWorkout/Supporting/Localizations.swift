@@ -23,20 +23,6 @@ public class Localizations {
         public static var NotValidated : String = NSLocalizedString("INPUT_VALIDATION.NOT_VALIDATED", tableName: nil, bundle: Bundle.main, comment: "")
 
 
-        public class Lastname {
-
-            /// Base translation: last name
-            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.LASTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
-
-        }
-
-        public class Firstname {
-
-            /// Base translation: first name
-            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
-
-        }
-
         public class Status {
 
             /// Base translation: %@ empty
@@ -48,6 +34,20 @@ public class Localizations {
             public static func Invalid(_ value1 : String) -> String {
                 return String(format: NSLocalizedString("INPUT_VALIDATION.STATUS.INVALID", tableName: nil, bundle: Bundle.main, comment: ""), value1)
             }
+
+        }
+
+        public class Firstname {
+
+            /// Base translation: first name
+            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
+
+        }
+
+        public class Lastname {
+
+            /// Base translation: last name
+            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.LASTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
 
         }
 

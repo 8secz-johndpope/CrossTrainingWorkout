@@ -24,6 +24,10 @@
 		0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */; };
 		0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */; };
 		0D306B202191F06F003C4C2D /* ValidableTextFieldContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */; };
+		0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */; };
+		0D306B2421943B05003C4C2D /* WodListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B2321943B05003C4C2D /* WodListView.xib */; };
+		0D306B2621943B79003C4C2D /* WodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2521943B79003C4C2D /* WodListViewController.swift */; };
+		0D306B2821943D45003C4C2D /* WodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2721943D45003C4C2D /* WodListView.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -112,6 +116,10 @@
 		0D306B172191E41F003C4C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainer.swift; sourceTree = "<group>"; };
 		0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainerTests.swift; sourceTree = "<group>"; };
+		0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesResultsViewController.swift; sourceTree = "<group>"; };
+		0D306B2321943B05003C4C2D /* WodListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodListView.xib; sourceTree = "<group>"; };
+		0D306B2521943B79003C4C2D /* WodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListViewController.swift; sourceTree = "<group>"; };
+		0D306B2721943D45003C4C2D /* WodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListView.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -402,6 +410,9 @@
 			isa = PBXGroup;
 			children = (
 				0D6C15292026261D0063FE0D /* Wod.storyboard */,
+				0D306B2321943B05003C4C2D /* WodListView.xib */,
+				0D306B2721943D45003C4C2D /* WodListView.swift */,
+				0D306B2521943B79003C4C2D /* WodListViewController.swift */,
 			);
 			path = Wod;
 			sourceTree = "<group>";
@@ -494,6 +505,7 @@
 				0DF2FFB921198FC600F3864F /* Data */,
 				0D63E2932039C886009DF452 /* AthletesListViewController.swift */,
 				0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */,
+				0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */,
 			);
 			path = Athletes;
 			sourceTree = "<group>";
@@ -657,6 +669,7 @@
 				0D6C152A2026261D0063FE0D /* Wod.storyboard in Resources */,
 				0D6C15262026260D0063FE0D /* History.storyboard in Resources */,
 				0D6C1528202626150063FE0D /* Team.storyboard in Resources */,
+				0D306B2421943B05003C4C2D /* WodListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,12 +722,14 @@
 				"${BUILT_PRODUCTS_DIR}/ListDataSourcesKit/ListDataSourcesKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ListDataSourcesKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -740,6 +755,7 @@
 				0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */,
 				0D63E2942039C886009DF452 /* AthletesListViewController.swift in Sources */,
 				0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */,
+				0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */,
 				0D6C150E2026191E0063FE0D /* Result.swift in Sources */,
 				0DCBBC192014EE2C0090EAD2 /* ViewController.swift in Sources */,
 				0D306AE821919778003C4C2D /* AppDependent.swift in Sources */,
@@ -773,6 +789,7 @@
 				0DB2D6A1219057CE0065A370 /* Storyboards.swift in Sources */,
 				0D6C151E20261AA90063FE0D /* Session.swift in Sources */,
 				0D63E28F2039C37C009DF452 /* NotifiyingWrittableDatabase.swift in Sources */,
+				0D306B2621943B79003C4C2D /* WodListViewController.swift in Sources */,
 				0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */,
 				0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */,
 				0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */,
@@ -784,6 +801,7 @@
 				0D1294082041BA08003CFA9B /* RoundedCornerView.swift in Sources */,
 				0D12940A2041BA1F003CFA9B /* Cornerisable.swift in Sources */,
 				0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */,
+				0D306B2821943D45003C4C2D /* WodListView.swift in Sources */,
 				0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */,
 				0D63E2902039C37C009DF452 /* WrittableDatabase.swift in Sources */,
 			);
@@ -989,7 +1007,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
 				INFOPLIST_FILE = "$(SRCROOT)/CrossTrainingWorkout/Supporting/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1007,7 +1025,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
 				INFOPLIST_FILE = "$(SRCROOT)/CrossTrainingWorkout/Supporting/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";

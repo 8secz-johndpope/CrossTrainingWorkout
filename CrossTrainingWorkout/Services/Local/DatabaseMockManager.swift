@@ -110,6 +110,10 @@ class DatabaseMockManager {
         // - CREATING RESULTS
         // --------------------------------------------
         
+        let session = Session()
+        session.date = Date()
+        session.wod = amrap
+        
         let session1 = SessionAmrap()
         session1.date = Date()
         session1.wod = amrap
