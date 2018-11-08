@@ -10,13 +10,6 @@ target 'CrossTrainingWorkout' do
   # Pods for CrossNoonTraining
   pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa', :branch => 'master', submodules: true
   pod 'ListDataSourcesKit'
-
-  target 'CrossTrainingWorkoutTests' do
-    inherit! :search_paths
-  end
-
-  target 'CrossTrainingWorkoutUITests' do
-    inherit! :search_paths
-  end
+  pod 'SnapKit'
 
 end
