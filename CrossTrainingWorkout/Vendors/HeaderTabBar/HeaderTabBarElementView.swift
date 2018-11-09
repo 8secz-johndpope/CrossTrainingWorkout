@@ -10,6 +10,10 @@ import UIKit
 
 class HeaderTabBarElementView: UIView, NibLoadable {
     
+    // **************************************************************
+    // MARK: - Life Cycle
+    // **************************************************************
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
@@ -20,7 +24,9 @@ class HeaderTabBarElementView: UIView, NibLoadable {
         loadView()
     }
     
+    // **************************************************************
     // MARK: - Outlets
+    // **************************************************************
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -45,13 +51,15 @@ class HeaderTabBarElementView: UIView, NibLoadable {
         }
     }
     
-    @IBOutlet weak var activeBottomBorderView: UIView!
-    
+    // **************************************************************
     // MARK: - Variables
+    // **************************************************************
     
     private var state: HeaderTabBarViewState = .inactive
     
-    // MARK: - UI
+    // **************************************************************
+    // MARK: - User Interface
+    // **************************************************************
     
     ///
     func build(withData data: HeaderTabBarElement) {

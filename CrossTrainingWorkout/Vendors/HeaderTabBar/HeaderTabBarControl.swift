@@ -9,10 +9,6 @@
 import UIKit
 import SnapKit
 
-enum HeaderTabBarElementPosition {
-    case left, middle(previous: Int), right(previous: Int)
-}
-
 @IBDesignable
 class HeaderTabBarControl: UIControl {
     
@@ -59,22 +55,10 @@ class HeaderTabBarControl: UIControl {
         buildHighlightView()
     }
     
-    private func getPosition(forIndex index: Int, inTotalIndexes total: Int) -> HeaderTabBarElementPosition {
-        
-        switch (index == 0, index == total) {
-        case (true, _):
-            return .left
-        case (_, true):
-            return .right(previous: index-1)
-        default:
-            return .middle(previous: index-1)
-        }
-    }
-    
     /// 🔄 Update control buttons depending on elements passed in parameter
     ///
     /// - Parameter elements: models allowing to create buttons
-    func update(elements: [HeaderTabBarElement]) {
+    func update(withElements elements: [HeaderTabBarElement]) {
         
         buttons.forEach({$0.removeFromSuperview()})
         buttons.removeAll()
@@ -95,6 +79,24 @@ class HeaderTabBarControl: UIControl {
             if doesViewNeedsToBeHighlighted(elementView, beingAtIndex: index) {
                 alignHighlightView(toButton: elementView)
             }
+        }
+    }
+    
+    /// ⬆️ Get position for an specific element
+    ///
+    /// - Parameters:
+    ///   - index: index of the element in array
+    ///   - total: total indexes in array
+    /// - Returns: position of the element
+    private func getPosition(forIndex index: Int, inTotalIndexes total: Int) -> HeaderTabBarElementPosition {
+        
+        switch (index == 0, index == total) {
+        case (true, _):
+            return .left
+        case (_, true):
+            return .right(previous: index-1)
+        default:
+            return .middle(previous: index-1)
         }
     }
     

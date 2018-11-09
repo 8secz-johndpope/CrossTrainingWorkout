@@ -33,6 +33,7 @@
 		0D306B2F21948147003C4C2D /* HeaderTabBarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */; };
 		0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */; };
 		0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */; };
+		0D306B37219591EE003C4C2D /* HeaderTabBarElementPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -130,6 +131,7 @@
 		0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarViewState.swift; sourceTree = "<group>"; };
 		0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElement.swift; sourceTree = "<group>"; };
 		0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTabBarElementView.xib; sourceTree = "<group>"; };
+		0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElementPosition.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */,
 				0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */,
 				0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */,
+				0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */,
 			);
 			path = HeaderTabBar;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */,
 				0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */,
 				0DF2FFBC2119902D00F3864F /* AthleteCell.swift in Sources */,
+				0D306B37219591EE003C4C2D /* HeaderTabBarElementPosition.swift in Sources */,
 				0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */,
 				0D306AED2191A7A3003C4C2D /* Localizations.swift in Sources */,
 				0D6C151A202619DB0063FE0D /* Movement.swift in Sources */,

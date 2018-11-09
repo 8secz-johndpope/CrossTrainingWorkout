@@ -20,7 +20,7 @@ class WodListFiltersViewController: UIViewController {
     
     @IBOutlet weak var headerTabBar: HeaderTabBarControl! {
         didSet {
-            headerTabBar.update(elements: tabBarElements)
+            headerTabBar.update(withElements: tabBarElements)
         }
     }
     
