@@ -92,14 +92,14 @@ public class Localizations {
 
         public class Password {
 
-            /// Base translation: Passwords do not match
-            public static var Correspondance : String = NSLocalizedString("INPUT_VALIDATION.PASSWORD.CORRESPONDANCE", tableName: nil, bundle: Bundle.main, comment: "")
+            /// Base translation: Your password must contain at least 6 caracters
+            public static var Length : String = NSLocalizedString("INPUT_VALIDATION.PASSWORD.LENGTH", tableName: nil, bundle: Bundle.main, comment: "")
 
             /// Base translation: password
             public static var Title : String = NSLocalizedString("INPUT_VALIDATION.PASSWORD.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
 
-            /// Base translation: Your password must contain at least 6 caracters
-            public static var Length : String = NSLocalizedString("INPUT_VALIDATION.PASSWORD.LENGTH", tableName: nil, bundle: Bundle.main, comment: "")
+            /// Base translation: Passwords do not match
+            public static var Correspondance : String = NSLocalizedString("INPUT_VALIDATION.PASSWORD.CORRESPONDANCE", tableName: nil, bundle: Bundle.main, comment: "")
 
         }
     }

@@ -78,13 +78,13 @@ class DatabaseMockManager {
         
         let amrap = Wod()
         amrap.id = "1"
-        amrap.wodType = Wod.WodType.amrap.rawValue
+        amrap.wodType = WodType.amrap.rawValue
         amrap.name = "The first WOD1"
         amrap.movements = movements
         amrap.timeCap = 20
         
         let forTime = Wod()
-        forTime.wodType = Wod.WodType.forTime.rawValue
+        forTime.wodType = WodType.forTime.rawValue
         forTime.id = "2"
         forTime.name = "The second WOD"
         forTime.movements = movements

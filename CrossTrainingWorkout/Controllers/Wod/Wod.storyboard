@@ -58,6 +58,15 @@
                                     <segue destination="7qI-HN-KVO" kind="embed" id="bAw-ke-SwP"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQ3-Qu-g6t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" placeholder="YES" id="hoF-Il-5av"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="TgP-gc-CFQ" kind="embed" id="dcY-zA-LzI"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" name="screen_background"/>
                         <constraints>
@@ -67,7 +76,10 @@
                             <constraint firstItem="qfS-Ka-LVB" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="QYU-cp-Bth"/>
                             <constraint firstItem="qfS-Ka-LVB" firstAttribute="top" secondItem="7Pr-Xm-nrv" secondAttribute="bottom" id="di4-Ie-QbG"/>
                             <constraint firstItem="qfS-Ka-LVB" firstAttribute="leading" secondItem="G3i-TM-eoA" secondAttribute="leading" id="eqn-dc-soT"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="leading" secondItem="G3i-TM-eoA" secondAttribute="leading" id="gOo-7V-EIh"/>
                             <constraint firstItem="7Pr-Xm-nrv" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="oeO-3W-F5r"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="top" secondItem="G3i-TM-eoA" secondAttribute="top" id="pnu-2Q-Br7"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="r2a-E3-lDU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G3i-TM-eoA"/>
                     </view>
@@ -76,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPF-xE-BT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535.20000000000005" y="-322.48875562218893"/>
+            <point key="canvasLocation" x="535.20000000000005" y="-322.90640394088672"/>
         </scene>
         <!--Wod List Filters View Controller-->
         <scene sceneID="qqe-yb-ujQ">
@@ -84,7 +96,7 @@
                 <viewController id="QhP-bH-B9U" customClass="WodListFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukS-Er-ZqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="-562"/>
+            <point key="canvasLocation" x="1318" y="-323"/>
         </scene>
         <!--Wod List Table View Controller-->
         <scene sceneID="xXG-PH-K2F">
@@ -92,7 +104,15 @@
                 <viewController id="7qI-HN-KVO" customClass="WodListTableViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv0-eE-SgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="-117"/>
+            <point key="canvasLocation" x="1318" y="-11"/>
+        </scene>
+        <!--New Wod View Controller-->
+        <scene sceneID="h37-Oi-05L">
+            <objects>
+                <viewController id="TgP-gc-CFQ" customClass="NewWodViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtU-7b-zQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-520"/>
         </scene>
     </scenes>
     <resources>
