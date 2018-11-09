@@ -81,61 +81,18 @@
         <!--Wod List Filters View Controller-->
         <scene sceneID="qqe-yb-ujQ">
             <objects>
-                <viewController id="QhP-bH-B9U" customClass="WodListFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VW3-sP-XHb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-ku-xYJ" customClass="HeaderTabBarControl" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="highlightHeight">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Jey-ku-xYJ" firstAttribute="leading" secondItem="VW3-sP-XHb" secondAttribute="leading" id="9hE-pa-P6U"/>
-                            <constraint firstAttribute="bottom" secondItem="Jey-ku-xYJ" secondAttribute="bottom" id="OVB-ck-eyw"/>
-                            <constraint firstItem="Jey-ku-xYJ" firstAttribute="top" secondItem="VW3-sP-XHb" secondAttribute="top" id="PSq-gh-zAs"/>
-                            <constraint firstAttribute="trailing" secondItem="Jey-ku-xYJ" secondAttribute="trailing" id="UTD-JI-0gX"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="headerTabBar" destination="Jey-ku-xYJ" id="INo-Ug-xfD"/>
-                    </connections>
-                </viewController>
+                <viewController id="QhP-bH-B9U" customClass="WodListFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukS-Er-ZqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="-567"/>
+            <point key="canvasLocation" x="1318" y="-562"/>
         </scene>
         <!--Wod List Table View Controller-->
         <scene sceneID="xXG-PH-K2F">
             <objects>
-                <viewController id="7qI-HN-KVO" customClass="WodListTableViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s8O-7H-sVk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-xY-OwG" customClass="WodListView" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
-                                <color key="backgroundColor" name="screen_background"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="uZk-xY-OwG" secondAttribute="trailing" id="GtV-3C-UET"/>
-                            <constraint firstItem="uZk-xY-OwG" firstAttribute="top" secondItem="s8O-7H-sVk" secondAttribute="top" id="Jyw-Tr-8TK"/>
-                            <constraint firstItem="uZk-xY-OwG" firstAttribute="leading" secondItem="s8O-7H-sVk" secondAttribute="leading" id="RYP-Bq-mer"/>
-                            <constraint firstAttribute="bottom" secondItem="uZk-xY-OwG" secondAttribute="bottom" id="u4M-re-VGo"/>
-                        </constraints>
-                    </view>
-                </viewController>
+                <viewController id="7qI-HN-KVO" customClass="WodListTableViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv0-eE-SgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="-113"/>
+            <point key="canvasLocation" x="1318" y="-117"/>
         </scene>
     </scenes>
     <resources>
