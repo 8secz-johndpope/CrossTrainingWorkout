@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Hidding all back buttons titles
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .highlighted)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         
         return true
     }
