@@ -9,6 +9,29 @@
 import UIKit
 import SnapKit
 
+class WodListFiltersViewController: UIViewController {
+    
+    private let tabBarElements: [HeaderTabBarElement] = [
+        HeaderTabBarElement(label: SessionType.amrap.title.uppercased(), notifications: 0, state: .active),
+        HeaderTabBarElement(label: SessionType.forTime.title.uppercased(), notifications: 0, state: .inactive),
+        HeaderTabBarElement(label: SessionType.finisher.title.uppercased(), notifications: 0, state: .inactive),
+        HeaderTabBarElement(label: SessionType.emom.title.uppercased(), notifications: 0, state: .inactive)
+    ]
+    
+    @IBOutlet weak var headerTabBar: HeaderTabBarControl! {
+        didSet {
+            headerTabBar.update(elements: tabBarElements)
+        }
+    }
+    
+}
+
+class WodListTableViewController: UIViewController {
+    
+    
+    
+}
+
 class WodListViewController: UIViewController, NibLoadable {
     
     override func viewDidLoad() {
