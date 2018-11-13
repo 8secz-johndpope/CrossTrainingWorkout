@@ -21,7 +21,7 @@ struct WodListLogicController: AppDependent {
     
 }
 
-class WodListViewController: UIViewController {
+class WodListViewController: UIViewController, CommonStateTransitionable {
     
     // **************************************************************
     // MARK: - Outlets
@@ -53,8 +53,19 @@ class WodListViewController: UIViewController {
     }
     
     // **************************************************************
-    // MARK: - Private business
+    // MARK: - Public business
     // **************************************************************
+    
+    public func updateTableViewPredicate(_ predicate: NSPredicate) {
+        
+        logicController.dataHandler.predicate = predicate
+        do {
+            try logicController.dataHandler.fetch()
+            tableView.reloadData()
+        } catch {
+            transition(toCommonState: .failure(error.localizedDescription))
+        }
+    }
     
     /// 🔄 Update table view insets
     public func updateTableViewInsets(withHeight height: CGFloat) {

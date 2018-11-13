@@ -23,13 +23,6 @@ public class Localizations {
         public static var NotValidated : String = NSLocalizedString("INPUT_VALIDATION.NOT_VALIDATED", tableName: nil, bundle: Bundle.main, comment: "")
 
 
-        public class Lastname {
-
-            /// Base translation: last name
-            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.LASTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
-
-        }
-
         public class Wod {
 
             /// Base translation: You should define a timecap
@@ -37,6 +30,13 @@ public class Localizations {
 
             /// Base translation: You should select a type
             public static var WodType : String = NSLocalizedString("INPUT_VALIDATION.WOD.WOD_TYPE", tableName: nil, bundle: Bundle.main, comment: "")
+
+        }
+
+        public class Firstname {
+
+            /// Base translation: first name
+            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
 
         }
 
@@ -54,10 +54,10 @@ public class Localizations {
 
         }
 
-        public class Firstname {
+        public class Lastname {
 
-            /// Base translation: first name
-            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
+            /// Base translation: last name
+            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.LASTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
 
         }
 

@@ -47,7 +47,7 @@ class WodFiltersViewController: UIViewController {
     
     private lazy var tabBarElements: [HeaderTabBarElement] = {
         return [
-            HeaderTabBarElement(label: WodType.amrap.title.uppercased(), notifications: 0, state: .active),
+            HeaderTabBarElement(label: WodType.amrap.title.uppercased(), notifications: 0, state: .inactive),
             HeaderTabBarElement(label: WodType.forTime.title.uppercased(), notifications: 0, state: .inactive),
             HeaderTabBarElement(label: WodType.finisher.title.uppercased(), notifications: 0, state: .inactive),
             HeaderTabBarElement(label: WodType.emom.title.uppercased(), notifications: 0, state: .inactive)

@@ -24,9 +24,9 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
     // MARK: - Variables
     // **************************************************************
     
-    private var newWodViewController: WodCreationViewController!
-    private var wodListTableViewController: WodListViewController!
-    private var wodListFiltersViewController: WodFiltersViewController!
+    private var wodCreationViewController: WodCreationViewController!
+    private var wodListViewController: WodListViewController!
+    private var wodFiltersViewController: WodFiltersViewController!
     
     private var heightConstraint: NSLayoutConstraint?
     
@@ -57,19 +57,21 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let newWodViewController = segue.destination as? WodCreationViewController {
+        if let creationController = segue.destination as? WodCreationViewController {
             
-            newWodViewController.delegate = self
-            newWodViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            wodCreationViewController = creationController
+            wodCreationViewController.delegate = self
+            wodCreationViewController.view.translatesAutoresizingMaskIntoConstraints = false
             
-            self.newWodViewController = newWodViewController
         } else if let listViewController = segue.destination as? WodListViewController {
             
-            listViewController.delegate = self
+            wodListViewController = listViewController
+            wodListViewController.delegate = self
             
-            self.wodListTableViewController = listViewController
         } else if let filterViewController = segue.destination as? WodFiltersViewController {
-            self.wodListFiltersViewController = filterViewController
+            
+            wodFiltersViewController = filterViewController
+            wodFiltersViewController.delegate = self
         }
     }
     
@@ -101,8 +103,8 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
     /// 🔄 Update table view insets
     private func updateTableViewInsets() {
         
-        let height = newWodContainer.frame.height - wodListFiltersViewController.view.frame.height
-        wodListTableViewController.updateTableViewInsets(withHeight: height)
+        let height = newWodContainer.frame.height - wodFiltersViewController.view.frame.height
+        wodListViewController.updateTableViewInsets(withHeight: height)
     }
     
 }
@@ -124,4 +126,13 @@ extension WodCoordinatorViewController: WodListViewControllerDelegate {
     func didAskForNewWod() {
         transition(to: .newAthlete)
     }
+}
+
+extension WodCoordinatorViewController: WodFiltersViewControllerDelegate {
+    
+    func didFilterWods(toType: WodType) {
+        guard let predicate = toType.predicate else { fatalError("There is no predicate for this wod type!") }
+        wodListViewController.updateTableViewPredicate(predicate)
+    }
+    
 }
