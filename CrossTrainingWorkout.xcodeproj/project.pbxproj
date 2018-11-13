@@ -60,6 +60,7 @@
 		0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E295203B4E41009DF452 /* TheNibLoadable.swift */; };
 		0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E297203B4E58009DF452 /* TheReusableCell.swift */; };
 		0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E299203B4E82009DF452 /* FakeableCell.swift */; };
+		0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445D1219B17E300289E31 /* NoCaretTextField.swift */; };
 		0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */; };
 		0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1504202617CC0063FE0D /* WodAmrap.swift */; };
 		0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1506202617D70063FE0D /* WodForTime.swift */; };
@@ -173,6 +174,7 @@
 		0D63E295203B4E41009DF452 /* TheNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheNibLoadable.swift; sourceTree = "<group>"; };
 		0D63E297203B4E58009DF452 /* TheReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheReusableCell.swift; sourceTree = "<group>"; };
 		0D63E299203B4E82009DF452 /* FakeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeableCell.swift; sourceTree = "<group>"; };
+		0D6445D1219B17E300289E31 /* NoCaretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCaretTextField.swift; sourceTree = "<group>"; };
 		0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiyingReadableDatabase.swift; sourceTree = "<group>"; };
 		0D6C1504202617CC0063FE0D /* WodAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodAmrap.swift; sourceTree = "<group>"; };
 		0D6C1506202617D70063FE0D /* WodForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodForTime.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1294072041BA08003CFA9B /* RoundedCornerView.swift */,
+				0D6445D1219B17E300289E31 /* NoCaretTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -933,6 +936,7 @@
 				0D6C150B202617F10063FE0D /* WodFinisher.swift in Sources */,
 				0D1294082041BA08003CFA9B /* RoundedCornerView.swift in Sources */,
 				0D12940A2041BA1F003CFA9B /* Cornerisable.swift in Sources */,
+				0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */,
 				0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */,
 				0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */,
 				0D63E2902039C37C009DF452 /* WrittableDatabase.swift in Sources */,

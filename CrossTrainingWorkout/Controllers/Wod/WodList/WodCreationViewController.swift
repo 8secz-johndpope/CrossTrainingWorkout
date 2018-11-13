@@ -8,13 +8,6 @@
 
 import UIKit
 
-class NoCaretTextField: ValidableTextField {
-    
-    override func caretRect(for position: UITextPosition) -> CGRect {
-        return CGRect.zero
-    }
-}
-
 struct WodCreationLogicController: AppDependent, ValidableTextFieldContainer {
     
     /// 🏭 Builds a new wod
@@ -35,6 +28,24 @@ struct WodCreationLogicController: AppDependent, ValidableTextFieldContainer {
         return wod
     }
     
+    /// Returns input errors
+    ///
+    /// - Returns: list of errors
+    public func getInputErrors(forTextFields textfields: [ValidableTextField], wodSelectedType: WodType?, wodInterval: TimeInterval?) -> [String]? {
+        
+        var errors = self.validateInDetails(textfields: textfields)
+        
+        if wodSelectedType == nil {
+            errors.append(Localizations.InputValidation.Wod.WodType)
+        }
+        
+        if wodInterval == nil {
+            errors.append(Localizations.InputValidation.Wod.Timecap)
+        }
+        
+        return errors.isEmpty ? nil : errors
+    }
+    
 }
 
 protocol WodCreationViewControllerDelegate: class {
@@ -43,6 +54,10 @@ protocol WodCreationViewControllerDelegate: class {
 }
 
 class WodCreationViewController: UIViewController, ValidableTextFieldContainer, CommonStateTransitionable {
+    
+    // **************************************************************
+    // MARK: - Outlets
+    // **************************************************************
     
     @IBOutlet weak var pickerView: UIPickerView! {
         didSet {
@@ -69,13 +84,34 @@ class WodCreationViewController: UIViewController, ValidableTextFieldContainer, 
     @IBOutlet weak var finisherButton: RoundedRedButton!
     @IBOutlet weak var emomButton: RoundedRedButton!
     
+    // **************************************************************
+    // MARK: - Variables
+    // **************************************************************
+    
     weak var delegate: WodCreationViewControllerDelegate?
     
-    var logicController: WodCreationLogicController!
+    private var logicController: WodCreationLogicController!
     
-    var wodSelectedType: WodType?
-    var wodInterval: TimeInterval?
+    private var wodSelectedType: WodType?
+    private var wodInterval: TimeInterval?
     
+    // **************************************************************
+    // MARK: - Life Cycle
+    // **************************************************************
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        logicController = WodCreationLogicController()
+    }
+    
+    // **************************************************************
+    // MARK: - User Interactions
+    // **************************************************************
+    
+    /// 👆 Handles when user has selected a type for the WOD
+    ///
+    /// - Parameter sender: sender
     @IBAction func didSelectType(_ sender: Any) {
         
         [amrapButton, forTimeButton, finisherButton, emomButton].forEach { $0?.isSelected = false }
@@ -92,34 +128,20 @@ class WodCreationViewController: UIViewController, ValidableTextFieldContainer, 
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        logicController = WodCreationLogicController()
-    }
-    
+    /// 👆 Handles when the user wants to submit the data
+    ///
+    /// - Parameter sender: sender
     @IBAction func submit(_ sender: Any) {
         
         view.endEditing(true)
         
         let textfields: [ValidableTextField] = [wodName]
-        
-        if let errorString = logicController?.validateGlobally(textfields: textfields) {
-            transition(toCommonState: .failure( errorString ))
+        if let errors = logicController.getInputErrors(forTextFields: textfields, wodSelectedType: wodSelectedType, wodInterval: wodInterval) {
+            transition(toCommonState: .failure( errors.joined(separator: "\n") ))
             return
         }
         
-        guard let unwrappedSelectedType = wodSelectedType else {
-            transition(toCommonState: .failure( Localizations.InputValidation.Wod.WodType ))
-            return
-        }
-        
-        guard let unwrappedWodInterval = wodInterval else {
-            transition(toCommonState: .failure( Localizations.InputValidation.Wod.Timecap ))
-            return
-        }
-        
-        let wod = logicController.buildWod(withName: wodName.text!, timeCap: unwrappedWodInterval, type: unwrappedSelectedType)
+        let wod = logicController.buildWod(withName: wodName.text!, timeCap: wodInterval!, type: wodSelectedType!)
         
         do {
             try logicController.database.save(wod, updateIfExisting: false)
@@ -130,6 +152,9 @@ class WodCreationViewController: UIViewController, ValidableTextFieldContainer, 
         delegate?.didSubmit(wod: wod)
     }
     
+    /// 👆 Handles when the user wants to cancel input
+    ///
+    /// - Parameter sender: sender
     @IBAction func cancel(_ sender: Any) {
         view.endEditing(true)
         delegate?.didCancel()

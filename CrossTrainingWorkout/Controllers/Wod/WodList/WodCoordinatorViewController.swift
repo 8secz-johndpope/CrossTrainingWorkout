@@ -8,10 +8,11 @@
 
 import UIKit
 
+/// Class responsible for coordinating all child view controllers
 class WodCoordinatorViewController: UIViewController, NibLoadable {
     
     // **************************************************************
-    // MARK: - Athletes List View Controller State
+    // MARK: - Wod List View Controller State
     // **************************************************************
     
     enum WodListViewControllerState {
@@ -19,8 +20,38 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
         case newAthlete
     }
     
+    // **************************************************************
+    // MARK: - Variables
+    // **************************************************************
+    
+    private var newWodViewController: WodCreationViewController!
+    private var wodListTableViewController: WodListViewController!
+    private var wodListFiltersViewController: WodFiltersViewController!
+    
+    private var heightConstraint: NSLayoutConstraint?
+    
+    // **************************************************************
+    // MARK: - Oulets
+    // **************************************************************
+    
+    @IBOutlet weak var newWodContainer: UIView! {
+        didSet {
+            self.heightConstraint = newWodContainer.heightAnchor.constraint(equalToConstant: 0)
+            self.heightConstraint?.isActive = true
+        }
+    }
+    
+    // **************************************************************
+    // MARK: - Life Cycle
+    // **************************************************************
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateTableViewInsets()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,18 +73,9 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
         }
     }
     
-    private var newWodViewController: WodCreationViewController!
-    private var wodListTableViewController: WodListViewController!
-    private var wodListFiltersViewController: WodFiltersViewController!
-    
-    var heightConstraint: NSLayoutConstraint?
-    
-    @IBOutlet weak var newWodContainer: UIView! {
-        didSet {
-            self.heightConstraint = newWodContainer.heightAnchor.constraint(equalToConstant: 0)
-            self.heightConstraint?.isActive = true
-        }
-    }
+    // **************************************************************
+    // MARK: - Private Business
+    // **************************************************************
     
     /// ↔️ Transition to a specific state
     ///
@@ -79,13 +101,8 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
     /// 🔄 Update table view insets
     private func updateTableViewInsets() {
         
-        let t = newWodContainer.frame.height - wodListFiltersViewController.view.frame.height
-        wodListTableViewController.updateTableViewInsets(withHeight: t)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateTableViewInsets()
+        let height = newWodContainer.frame.height - wodListFiltersViewController.view.frame.height
+        wodListTableViewController.updateTableViewInsets(withHeight: height)
     }
     
 }
@@ -93,7 +110,7 @@ class WodCoordinatorViewController: UIViewController, NibLoadable {
 extension WodCoordinatorViewController: WodCreationViewControllerDelegate {
     
     func didSubmit(wod: Wod) {
-        //?
+        transition(to: .consulting)
     }
     
     func didCancel() {

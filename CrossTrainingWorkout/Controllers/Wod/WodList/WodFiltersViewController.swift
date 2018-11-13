@@ -8,21 +8,42 @@
 
 import UIKit
 
-enum WodTypeTabBarSelectedIndex: Int {
-    
-    case amrap = 0, forTime, finisher, emom
-    
-    public var wodType: WodType {
-        return WodType(rawValue: String(describing: self) )!
-    }
-}
-
 protocol WodFiltersViewControllerDelegate: class {
     
     func didFilterWods(toType: WodType)
 }
 
 class WodFiltersViewController: UIViewController {
+    
+    // **************************************************************
+    // MARK: - Wod Type TabBar Selected Index
+    // **************************************************************
+    
+    enum WodTypeTabBarSelectedIndex: Int {
+        
+        case amrap = 0, forTime, finisher, emom
+        
+        public var wodType: WodType {
+            return WodType(rawValue: String(describing: self) )!
+        }
+    }
+    
+    // **************************************************************
+    // MARK: - Outlets
+    // **************************************************************
+    
+    @IBOutlet weak var headerTabBar: HeaderTabBarControl! {
+        didSet {
+            headerTabBar.update(withElements: tabBarElements)
+            headerTabBar.addTarget(self, action: #selector(didUpdateFilters), for: .valueChanged)
+        }
+    }
+    
+    // **************************************************************
+    // MARK: - Variables
+    // **************************************************************
+    
+    weak var delegate: WodFiltersViewControllerDelegate?
     
     private lazy var tabBarElements: [HeaderTabBarElement] = {
         return [
@@ -33,15 +54,11 @@ class WodFiltersViewController: UIViewController {
         ]
     }()
     
-    @IBOutlet weak var headerTabBar: HeaderTabBarControl! {
-        didSet {
-            headerTabBar.update(withElements: tabBarElements)
-            headerTabBar.addTarget(self, action: #selector(didUpdateFilters), for: .valueChanged)
-        }
-    }
+    // **************************************************************
+    // MARK: - User Interactions
+    // **************************************************************
     
-    weak var delegate: WodFiltersViewControllerDelegate?
-    
+    /// 👆 Handles when user has updated filters
     @objc private func didUpdateFilters() {
         guard let selectedIndex = headerTabBar.selectedIndex, let selected = WodTypeTabBarSelectedIndex(rawValue: selectedIndex) else {return}
         delegate?.didFilterWods(toType: selected.wodType)

@@ -23,30 +23,38 @@ struct WodListLogicController: AppDependent {
 
 class WodListViewController: UIViewController {
     
+    // **************************************************************
+    // MARK: - Outlets
+    // **************************************************************
+    
     @IBOutlet var tableView: UITableView! {
         didSet {
-            print("🎁🎁🎁🎁🎁🎁 \(WodCell.nib)")
-            tableView.register(WodCell.nib, forCellReuseIdentifier: "WodCell")
+            tableView.register(WodCell.nib, forCellReuseIdentifier: WodCell.nibName)
         }
     }
     
     @IBOutlet var addAthleteButton: UIButton!
     
+    // **************************************************************
+    // MARK: - Variables
+    // **************************************************************
+    
     weak var delegate: WodListViewControllerDelegate?
     
     private var logicController: WodListLogicController!
+    
+    // **************************************************************
+    // MARK: - Life Cycle
+    // **************************************************************
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logicController = WodListLogicController(tableView: self.tableView)
     }
     
-    /// 👆 Handles when user want's to add a new athlete
-    ///
-    /// - Parameter sender: _
-    @IBAction func addNewAthlete(_ sender: Any) {
-        delegate?.didAskForNewWod()
-    }
+    // **************************************************************
+    // MARK: - Private business
+    // **************************************************************
     
     /// 🔄 Update table view insets
     public func updateTableViewInsets(withHeight height: CGFloat) {
@@ -54,6 +62,17 @@ class WodListViewController: UIViewController {
         let height = max(height, addAthleteButton.frame.height + 15)
         tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -height)
+    }
+    
+    // **************************************************************
+    // MARK: - User Interactions
+    // **************************************************************
+    
+    /// 👆 Handles when user want's to add a new athlete
+    ///
+    /// - Parameter sender: _
+    @IBAction func addNewAthlete(_ sender: Any) {
+        delegate?.didAskForNewWod()
     }
     
 }
