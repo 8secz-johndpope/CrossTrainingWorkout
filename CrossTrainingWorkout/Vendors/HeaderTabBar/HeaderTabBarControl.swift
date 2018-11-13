@@ -107,7 +107,7 @@ class HeaderTabBarControl: UIControl {
     ///   - index: index of the element in array
     /// - Returns: does element need to be highlighted
     private func doesViewNeedsToBeHighlighted(_ elementView: HeaderTabBarElementView, beingAtIndex index: Int) -> Bool {
-        guard let previousSelectedIndex = selectedIndex, previousSelectedIndex == index else { return index == 0 }
+        guard let previousSelectedIndex = selectedIndex, previousSelectedIndex == index else { return false }
         return true
     }
     
