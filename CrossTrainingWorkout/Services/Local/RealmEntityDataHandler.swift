@@ -28,7 +28,10 @@ public class RealmEntityDataHandler<ListDataView: CellParentViewProtocol, DataEn
         fatalError("BuidViewModel should be overriden!")
     }
     
-    public func fetch() throws {}
+    public func fetch() throws {
+        
+        self.dataProvider = buildDataProvider()
+    }
     
     /// ⚠️ Those closures allow controller to respond to specific events of Realm Database
     var didChangeContent: DidChangeContentHandler?

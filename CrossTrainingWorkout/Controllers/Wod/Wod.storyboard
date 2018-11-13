@@ -1,31 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Quq-UH-OyP">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9qe-kx-oGw">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Wod-->
-        <scene sceneID="8tB-re-1Uk">
+        <!--WOD-->
+        <scene sceneID="Ccy-TK-s7F">
             <objects>
-                <viewController id="Quq-UH-OyP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pjO-lq-mFo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="mJc-Z5-71X"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Wod" id="ghU-Q1-piM"/>
+                <navigationController id="9qe-kx-oGw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WOD" image="wod" id="ZJc-cg-VM5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ccm-qW-l6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="aUM-7x-vhz">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14901960784313725" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F7d-Is-v0r" kind="relationship" relationship="rootViewController" id="ieb-hJ-68V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5Z-pp-6qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="-322"/>
+            <point key="canvasLocation" x="-292" y="-323"/>
+        </scene>
+        <!--WOD-->
+        <scene sceneID="KRP-jg-cVo">
+            <objects>
+                <viewController id="F7d-Is-v0r" customClass="WodCoordinatorViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wr5-8U-weh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pr-Xm-nrv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.21960784310000001" blue="0.28627450980000002" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cXn-fk-BWe"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="QhP-bH-B9U" kind="embed" id="ifu-wi-Xk0"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfS-Ka-LVB">
+                                <rect key="frame" x="0.0" y="40" width="375" height="601"/>
+                                <connections>
+                                    <segue destination="7qI-HN-KVO" kind="embed" id="bAw-ke-SwP"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQ3-Qu-g6t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" placeholder="YES" id="hoF-Il-5av"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="TgP-gc-CFQ" kind="embed" id="dcY-zA-LzI"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="screen_background"/>
+                        <constraints>
+                            <constraint firstItem="7Pr-Xm-nrv" firstAttribute="top" secondItem="G3i-TM-eoA" secondAttribute="top" id="Bos-yW-NOj"/>
+                            <constraint firstItem="qfS-Ka-LVB" firstAttribute="bottom" secondItem="G3i-TM-eoA" secondAttribute="bottom" id="Dbn-U8-Atj"/>
+                            <constraint firstItem="7Pr-Xm-nrv" firstAttribute="leading" secondItem="G3i-TM-eoA" secondAttribute="leading" id="ICb-78-hVw"/>
+                            <constraint firstItem="qfS-Ka-LVB" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="QYU-cp-Bth"/>
+                            <constraint firstItem="qfS-Ka-LVB" firstAttribute="top" secondItem="7Pr-Xm-nrv" secondAttribute="bottom" id="di4-Ie-QbG"/>
+                            <constraint firstItem="qfS-Ka-LVB" firstAttribute="leading" secondItem="G3i-TM-eoA" secondAttribute="leading" id="eqn-dc-soT"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="leading" secondItem="G3i-TM-eoA" secondAttribute="leading" id="gOo-7V-EIh"/>
+                            <constraint firstItem="7Pr-Xm-nrv" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="oeO-3W-F5r"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="top" secondItem="G3i-TM-eoA" secondAttribute="top" id="pnu-2Q-Br7"/>
+                            <constraint firstItem="yQ3-Qu-g6t" firstAttribute="trailing" secondItem="G3i-TM-eoA" secondAttribute="trailing" id="r2a-E3-lDU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G3i-TM-eoA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WOD" id="4yQ-fq-mKO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newWodContainer" destination="yQ3-Qu-g6t" id="gMR-54-IW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPF-xE-BT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535.20000000000005" y="-322.90640394088672"/>
+        </scene>
+        <!--Wod Filters View Controller-->
+        <scene sceneID="qqe-yb-ujQ">
+            <objects>
+                <viewController id="QhP-bH-B9U" customClass="WodFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukS-Er-ZqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-323"/>
+        </scene>
+        <!--Wod List View Controller-->
+        <scene sceneID="xXG-PH-K2F">
+            <objects>
+                <viewController id="7qI-HN-KVO" customClass="WodListViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qv0-eE-SgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-11"/>
+        </scene>
+        <!--Wod Creation View Controller-->
+        <scene sceneID="h37-Oi-05L">
+            <objects>
+                <viewController id="TgP-gc-CFQ" customClass="WodCreationViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtU-7b-zQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="-520"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wod" width="29" height="20"/>
+        <namedColor name="screen_background">
+            <color red="0.25499999523162842" green="0.31400001049041748" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

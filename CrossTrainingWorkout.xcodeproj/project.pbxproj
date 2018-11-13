@@ -15,6 +15,11 @@
 		0D12940D2041BE46003CFA9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D12940F2041BE46003CFA9B /* Localizable.strings */; };
 		0D1D9AEA2026173300C61CAC /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AE92026173300C61CAC /* Athlete.swift */; };
 		0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AED2026179300C61CAC /* Wod.swift */; };
+		0D26821E219AC9BB006532F6 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */; };
+		0D268222219AEAFE006532F6 /* WodEntityDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */; };
+		0D268223219AEAFE006532F6 /* WodCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268221219AEAFE006532F6 /* WodCellViewModel.swift */; };
+		0D268225219AEB25006532F6 /* WodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268224219AEB25006532F6 /* WodCell.swift */; };
+		0D268227219AEC9B006532F6 /* WodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D268226219AEC9B006532F6 /* WodCell.xib */; };
 		0D306AD72190A169003C4C2D /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AD62190A169003C4C2D /* Transitionable.swift */; };
 		0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */; };
 		0D306AE621919354003C4C2D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE521919354003C4C2D /* App.swift */; };
@@ -24,6 +29,26 @@
 		0D306B162191E41F003C4C2D /* CrossTrainingWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B152191E41F003C4C2D /* CrossTrainingWorkoutTests.swift */; };
 		0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */; };
 		0D306B202191F06F003C4C2D /* ValidableTextFieldContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */; };
+		0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */; };
+		0D306B2421943B05003C4C2D /* WodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B2321943B05003C4C2D /* WodListViewController.xib */; };
+		0D306B2621943B79003C4C2D /* WodCoordinatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */; };
+		0D306B2B21948001003C4C2D /* HeaderTabBarControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2A21948001003C4C2D /* HeaderTabBarControl.swift */; };
+		0D306B2D21948123003C4C2D /* HeaderTabBarElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */; };
+		0D306B2F21948147003C4C2D /* HeaderTabBarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */; };
+		0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */; };
+		0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */; };
+		0D306B37219591EE003C4C2D /* HeaderTabBarElementPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */; };
+		0D306B3D21959A0D003C4C2D /* WodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3C21959A0D003C4C2D /* WodListViewController.swift */; };
+		0D306B3F21959AFA003C4C2D /* WodFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */; };
+		0D306B4121959B43003C4C2D /* WodFiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */; };
+		0D306B452195CDCC003C4C2D /* WodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B442195CDCC003C4C2D /* WodType.swift */; };
+		0D306B472195CE02003C4C2D /* SessionAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B462195CE02003C4C2D /* SessionAmrap.swift */; };
+		0D306B492195CE06003C4C2D /* SessionFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B482195CE06003C4C2D /* SessionFinisher.swift */; };
+		0D306B4B2195CE07003C4C2D /* SessionForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B4A2195CE07003C4C2D /* SessionForTime.swift */; };
+		0D306B4D2195CE09003C4C2D /* SessionEmom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B4C2195CE09003C4C2D /* SessionEmom.swift */; };
+		0D306B4F2195D3BA003C4C2D /* WodCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */; };
+		0D306B512195D3ED003C4C2D /* WodCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */; };
+		0D306B532195E807003C4C2D /* RoundedRedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B522195E807003C4C2D /* RoundedRedButton.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
 		0D63E28D2039C37C009DF452 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2872039C37C009DF452 /* Storable.swift */; };
@@ -35,6 +60,7 @@
 		0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E295203B4E41009DF452 /* TheNibLoadable.swift */; };
 		0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E297203B4E58009DF452 /* TheReusableCell.swift */; };
 		0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E299203B4E82009DF452 /* FakeableCell.swift */; };
+		0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445D1219B17E300289E31 /* NoCaretTextField.swift */; };
 		0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */; };
 		0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1504202617CC0063FE0D /* WodAmrap.swift */; };
 		0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1506202617D70063FE0D /* WodForTime.swift */; };
@@ -101,6 +127,11 @@
 		0D1294102041BE62003CFA9B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D1D9AE92026173300C61CAC /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		0D1D9AED2026179300C61CAC /* Wod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wod.swift; sourceTree = "<group>"; };
+		0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
+		0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodEntityDataHandler.swift; sourceTree = "<group>"; };
+		0D268221219AEAFE006532F6 /* WodCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodCellViewModel.swift; sourceTree = "<group>"; };
+		0D268224219AEB25006532F6 /* WodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCell.swift; sourceTree = "<group>"; };
+		0D268226219AEC9B006532F6 /* WodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodCell.xib; sourceTree = "<group>"; };
 		0D306AD62190A169003C4C2D /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
 		0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonControllerState.swift; sourceTree = "<group>"; };
 		0D306AE521919354003C4C2D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -112,6 +143,26 @@
 		0D306B172191E41F003C4C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainer.swift; sourceTree = "<group>"; };
 		0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainerTests.swift; sourceTree = "<group>"; };
+		0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesResultsViewController.swift; sourceTree = "<group>"; };
+		0D306B2321943B05003C4C2D /* WodListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodListViewController.xib; sourceTree = "<group>"; };
+		0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCoordinatorViewController.swift; sourceTree = "<group>"; };
+		0D306B2A21948001003C4C2D /* HeaderTabBarControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarControl.swift; sourceTree = "<group>"; };
+		0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElementView.swift; sourceTree = "<group>"; };
+		0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarViewState.swift; sourceTree = "<group>"; };
+		0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElement.swift; sourceTree = "<group>"; };
+		0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTabBarElementView.xib; sourceTree = "<group>"; };
+		0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElementPosition.swift; sourceTree = "<group>"; };
+		0D306B3C21959A0D003C4C2D /* WodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListViewController.swift; sourceTree = "<group>"; };
+		0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodFiltersViewController.swift; sourceTree = "<group>"; };
+		0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodFiltersViewController.xib; sourceTree = "<group>"; };
+		0D306B442195CDCC003C4C2D /* WodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodType.swift; sourceTree = "<group>"; };
+		0D306B462195CE02003C4C2D /* SessionAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAmrap.swift; sourceTree = "<group>"; };
+		0D306B482195CE06003C4C2D /* SessionFinisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFinisher.swift; sourceTree = "<group>"; };
+		0D306B4A2195CE07003C4C2D /* SessionForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionForTime.swift; sourceTree = "<group>"; };
+		0D306B4C2195CE09003C4C2D /* SessionEmom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEmom.swift; sourceTree = "<group>"; };
+		0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodCreationViewController.xib; sourceTree = "<group>"; };
+		0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCreationViewController.swift; sourceTree = "<group>"; };
+		0D306B522195E807003C4C2D /* RoundedRedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRedButton.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
 		0D63E2872039C37C009DF452 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
@@ -123,6 +174,7 @@
 		0D63E295203B4E41009DF452 /* TheNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheNibLoadable.swift; sourceTree = "<group>"; };
 		0D63E297203B4E58009DF452 /* TheReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheReusableCell.swift; sourceTree = "<group>"; };
 		0D63E299203B4E82009DF452 /* FakeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeableCell.swift; sourceTree = "<group>"; };
+		0D6445D1219B17E300289E31 /* NoCaretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCaretTextField.swift; sourceTree = "<group>"; };
 		0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiyingReadableDatabase.swift; sourceTree = "<group>"; };
 		0D6C1504202617CC0063FE0D /* WodAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodAmrap.swift; sourceTree = "<group>"; };
 		0D6C1506202617D70063FE0D /* WodForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodForTime.swift; sourceTree = "<group>"; };
@@ -202,6 +254,7 @@
 				0D043FCC20A9F50000D6226C /* StringExtensions.swift */,
 				0DF2FFB621198F4000F3864F /* ResultsExtension.swift */,
 				0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */,
+				0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1294072041BA08003CFA9B /* RoundedCornerView.swift */,
+				0D6445D1219B17E300289E31 /* NoCaretTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,8 +358,18 @@
 				0D6C1506202617D70063FE0D /* WodForTime.swift */,
 				0D6C1508202617E00063FE0D /* WodEmom.swift */,
 				0D6C150A202617F10063FE0D /* WodFinisher.swift */,
+				0D306B442195CDCC003C4C2D /* WodType.swift */,
 			);
 			path = Wod;
+			sourceTree = "<group>";
+		};
+		0D26821F219AEAA5006532F6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0D268221219AEAFE006532F6 /* WodCellViewModel.swift */,
+				0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		0D306B142191E41F003C4C2D /* CrossTrainingWorkoutTests */ = {
@@ -316,6 +380,42 @@
 				0D306B172191E41F003C4C2D /* Info.plist */,
 			);
 			path = CrossTrainingWorkoutTests;
+			sourceTree = "<group>";
+		};
+		0D306B2921947FEA003C4C2D /* HeaderTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0D306B2A21948001003C4C2D /* HeaderTabBarControl.swift */,
+				0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */,
+				0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */,
+				0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */,
+				0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */,
+				0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */,
+			);
+			path = HeaderTabBar;
+			sourceTree = "<group>";
+		};
+		0D306B4221959C3D003C4C2D /* WodList */ = {
+			isa = PBXGroup;
+			children = (
+				0D26821F219AEAA5006532F6 /* Data */,
+				0D306B4321959C55003C4C2D /* View */,
+				0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */,
+				0D306B3C21959A0D003C4C2D /* WodListViewController.swift */,
+				0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */,
+				0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */,
+			);
+			path = WodList;
+			sourceTree = "<group>";
+		};
+		0D306B4321959C55003C4C2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445D0219B106400289E31 /* Cell */,
+				0D6445CF219B105600289E31 /* Xib */,
+				0D306B522195E807003C4C2D /* RoundedRedButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0D63E2842039C301009DF452 /* Local */ = {
@@ -347,6 +447,25 @@
 				0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */,
 			);
 			path = DatabaseKit;
+			sourceTree = "<group>";
+		};
+		0D6445CF219B105600289E31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				0D306B2321943B05003C4C2D /* WodListViewController.xib */,
+				0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */,
+				0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		0D6445D0219B106400289E31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0D268224219AEB25006532F6 /* WodCell.swift */,
+				0D268226219AEC9B006532F6 /* WodCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0D6C150C202619050063FE0D /* Result */ = {
@@ -386,6 +505,10 @@
 			isa = PBXGroup;
 			children = (
 				0D6C151D20261AA90063FE0D /* Session.swift */,
+				0D306B462195CE02003C4C2D /* SessionAmrap.swift */,
+				0D306B4A2195CE07003C4C2D /* SessionForTime.swift */,
+				0D306B482195CE06003C4C2D /* SessionFinisher.swift */,
+				0D306B4C2195CE09003C4C2D /* SessionEmom.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -402,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				0D6C15292026261D0063FE0D /* Wod.storyboard */,
+				0D306B4221959C3D003C4C2D /* WodList */,
 			);
 			path = Wod;
 			sourceTree = "<group>";
@@ -409,8 +533,8 @@
 		0D6C1523202625ED0063FE0D /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				0DF2FFB821198FAB00F3864F /* Athletes */,
 				0D6C1527202626150063FE0D /* Team.storyboard */,
+				0DF2FFB821198FAB00F3864F /* Athletes */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -482,6 +606,7 @@
 		0DF2FF9A21195C5400F3864F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				0D306B2921947FEA003C4C2D /* HeaderTabBar */,
 				0D63E2922039C467009DF452 /* DatabaseKit */,
 			);
 			path = Vendors;
@@ -494,6 +619,7 @@
 				0DF2FFB921198FC600F3864F /* Data */,
 				0D63E2932039C886009DF452 /* AthletesListViewController.swift */,
 				0DF2FFC1211990AD00F3864F /* NewAthleteViewController.swift */,
+				0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */,
 			);
 			path = Athletes;
 			sourceTree = "<group>";
@@ -650,13 +776,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */,
 				0DCBBC212014EE2C0090EAD2 /* LaunchScreen.storyboard in Resources */,
+				0D306B4121959B43003C4C2D /* WodFiltersViewController.xib in Resources */,
 				0DCBBC1E2014EE2C0090EAD2 /* Assets.xcassets in Resources */,
 				0DCBBC1C2014EE2C0090EAD2 /* Main.storyboard in Resources */,
 				0D12940D2041BE46003CFA9B /* Localizable.strings in Resources */,
 				0D6C152A2026261D0063FE0D /* Wod.storyboard in Resources */,
 				0D6C15262026260D0063FE0D /* History.storyboard in Resources */,
+				0D306B4F2195D3BA003C4C2D /* WodCreationViewController.xib in Resources */,
 				0D6C1528202626150063FE0D /* Team.storyboard in Resources */,
+				0D268227219AEC9B006532F6 /* WodCell.xib in Resources */,
+				0D306B2421943B05003C4C2D /* WodListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,12 +840,14 @@
 				"${BUILT_PRODUCTS_DIR}/ListDataSourcesKit/ListDataSourcesKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ListDataSourcesKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -739,30 +872,44 @@
 			files = (
 				0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */,
 				0D63E2942039C886009DF452 /* AthletesListViewController.swift in Sources */,
+				0D306B2D21948123003C4C2D /* HeaderTabBarElementView.swift in Sources */,
+				0D268223219AEAFE006532F6 /* WodCellViewModel.swift in Sources */,
 				0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */,
+				0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */,
 				0D6C150E2026191E0063FE0D /* Result.swift in Sources */,
 				0DCBBC192014EE2C0090EAD2 /* ViewController.swift in Sources */,
+				0D268225219AEB25006532F6 /* WodCell.swift in Sources */,
 				0D306AE821919778003C4C2D /* AppDependent.swift in Sources */,
+				0D306B512195D3ED003C4C2D /* WodCreationViewController.swift in Sources */,
 				0D6C1509202617E00063FE0D /* WodEmom.swift in Sources */,
 				0D63E28D2039C37C009DF452 /* Storable.swift in Sources */,
 				0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */,
 				0D6C15102026192F0063FE0D /* RoundResult.swift in Sources */,
+				0D306B532195E807003C4C2D /* RoundedRedButton.swift in Sources */,
 				0DF2FFB521195CC800F3864F /* RealmEntityDataHandler.swift in Sources */,
 				0D6C15142026194F0063FE0D /* EmomResult.swift in Sources */,
 				0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */,
 				0D6C15122026193E0063FE0D /* TimeResult.swift in Sources */,
+				0D306B3D21959A0D003C4C2D /* WodListViewController.swift in Sources */,
+				0D26821E219AC9BB006532F6 /* TimeIntervalExtensions.swift in Sources */,
 				0D1D9AEA2026173300C61CAC /* Athlete.swift in Sources */,
 				0D63E2912039C37C009DF452 /* ReadableDatabase.swift in Sources */,
 				0DF2FFBE2119905300F3864F /* AthleteCellViewModel.swift in Sources */,
 				0DF2FFB721198F4000F3864F /* ResultsExtension.swift in Sources */,
+				0D306B2F21948147003C4C2D /* HeaderTabBarViewState.swift in Sources */,
 				0D6C151C202619FC0063FE0D /* MovementConfiguration.swift in Sources */,
 				0DF2FFC42119918C00F3864F /* ValidableTextField.swift in Sources */,
 				0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */,
 				0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */,
 				0D1294032041B65C003CFA9B /* UIColorExtensions.swift in Sources */,
+				0D268222219AEAFE006532F6 /* WodEntityDataHandler.swift in Sources */,
 				0D6C1517202619A80063FE0D /* Resultable.swift in Sources */,
+				0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */,
+				0D306B492195CE06003C4C2D /* SessionFinisher.swift in Sources */,
 				0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */,
+				0D306B472195CE02003C4C2D /* SessionAmrap.swift in Sources */,
 				0DF2FFBC2119902D00F3864F /* AthleteCell.swift in Sources */,
+				0D306B37219591EE003C4C2D /* HeaderTabBarElementPosition.swift in Sources */,
 				0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */,
 				0D306AED2191A7A3003C4C2D /* Localizations.swift in Sources */,
 				0D6C151A202619DB0063FE0D /* Movement.swift in Sources */,
@@ -773,16 +920,23 @@
 				0DB2D6A1219057CE0065A370 /* Storyboards.swift in Sources */,
 				0D6C151E20261AA90063FE0D /* Session.swift in Sources */,
 				0D63E28F2039C37C009DF452 /* NotifiyingWrittableDatabase.swift in Sources */,
+				0D306B4D2195CE09003C4C2D /* SessionEmom.swift in Sources */,
+				0D306B452195CDCC003C4C2D /* WodType.swift in Sources */,
+				0D306B2621943B79003C4C2D /* WodCoordinatorViewController.swift in Sources */,
 				0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */,
+				0D306B3F21959AFA003C4C2D /* WodFiltersViewController.swift in Sources */,
 				0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */,
+				0D306B2B21948001003C4C2D /* HeaderTabBarControl.swift in Sources */,
 				0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */,
 				0DF2FFC02119907200F3864F /* AhtleteEntityDataHandler.swift in Sources */,
 				0D043FCB20A9F4CF00D6226C /* InputValidator.swift in Sources */,
 				0D043FCD20A9F50000D6226C /* StringExtensions.swift in Sources */,
+				0D306B4B2195CE07003C4C2D /* SessionForTime.swift in Sources */,
 				0DCBBC172014EE2C0090EAD2 /* AppDelegate.swift in Sources */,
 				0D6C150B202617F10063FE0D /* WodFinisher.swift in Sources */,
 				0D1294082041BA08003CFA9B /* RoundedCornerView.swift in Sources */,
 				0D12940A2041BA1F003CFA9B /* Cornerisable.swift in Sources */,
+				0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */,
 				0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */,
 				0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */,
 				0D63E2902039C37C009DF452 /* WrittableDatabase.swift in Sources */,
@@ -989,7 +1143,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
 				INFOPLIST_FILE = "$(SRCROOT)/CrossTrainingWorkout/Supporting/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1007,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5GBVVQ572;
 				INFOPLIST_FILE = "$(SRCROOT)/CrossTrainingWorkout/Supporting/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.crossnoon.CrossNoonTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";

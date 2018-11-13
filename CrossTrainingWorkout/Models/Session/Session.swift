@@ -50,19 +50,3 @@ class Session: Object, Codable, SessionResultable {
         return name
     }
 }
-
-class SessionAmrap: Session {
-    typealias T = RoundResult
-}
-
-class SessionFinisher: Session {
-    typealias T = TimeResult
-}
-
-class SessionForTime: Session {
-    typealias T = TimeResult
-}
-
-class SessionEmom: Session {
-    typealias T = EmomResult
-}

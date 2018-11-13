@@ -10,7 +10,7 @@ import UIKit
 
 struct NewAthleteLogicController: AppDependent, ValidableTextFieldContainer {
     
-    /// 🏭 Builds an user
+    /// 🏭 Builds a new user
     ///
     /// - Parameters:
     ///   - firstname: firstname of the user
