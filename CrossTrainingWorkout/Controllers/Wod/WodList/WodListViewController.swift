@@ -56,6 +56,9 @@ class WodListViewController: UIViewController, CommonStateTransitionable {
     // MARK: - Public business
     // **************************************************************
     
+    /// Updates predicate for shown wods
+    ///
+    /// - Parameter predicate: predicate
     public func updateTableViewPredicate(_ predicate: NSPredicate) {
         
         logicController.dataHandler.predicate = predicate
