@@ -79,16 +79,30 @@ class DatabaseMockManager {
         let amrap = Wod()
         amrap.id = "1"
         amrap.wodType = WodType.amrap.rawValue
-        amrap.name = "The first WOD1"
+        amrap.name = "AMRAP WOD"
         amrap.movements = movements
         amrap.timeCap = 20
         
         let forTime = Wod()
         forTime.wodType = WodType.forTime.rawValue
         forTime.id = "2"
-        forTime.name = "The second WOD"
+        forTime.name = "FORTIME WOD"
         forTime.movements = movements
         forTime.timeCap = 20
+        
+        let emom = Wod()
+        emom.wodType = WodType.emom.rawValue
+        emom.id = "3"
+        emom.name = "EMOM WOD"
+        emom.movements = movements
+        emom.timeCap = 20
+        
+        let finisher = Wod()
+        finisher.wodType = WodType.finisher.rawValue
+        finisher.id = "4"
+        finisher.name = "FINISHER WOD"
+        finisher.movements = movements
+        finisher.timeCap = 20
         
         // --------------------------------------------
         // - CREATING RESULTS
@@ -148,6 +162,8 @@ class DatabaseMockManager {
             
             realm.add(amrap)
             realm.add(forTime)
+            realm.add(emom)
+            realm.add(finisher)
             
             realm.add(session1)
             realm.add(session2)
