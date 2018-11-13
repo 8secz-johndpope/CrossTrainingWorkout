@@ -10,8 +10,8 @@ import UIKit
 
 struct AthleteSessionResultsCountViewModel {
     
-    var sessionType: SessionType
-    var sessionTypeAmount: Int
+    var wodType: WodType
+    var wodTypeAmount: Int
 }
 
 class AthleteSessionResultsCountView: UIView {
@@ -37,9 +37,9 @@ class AthleteSessionResultsCountView: UIView {
         
         layer.cornerRadius = 4
         
-        topLine.backgroundColor = model.sessionType.color
-        resultTypeLable.text = model.sessionType.title
-        resultsCount.text = "\(model.sessionTypeAmount)"
+        topLine.backgroundColor = model.wodType.color
+        resultTypeLable.text = model.wodType.title
+        resultsCount.text = "\(model.wodTypeAmount)"
     }
     
 }
@@ -103,10 +103,10 @@ class AthletesResultsViewController: UIViewController {
         
         totalWodNumber.text = "\(athleteResults.total)"
         
-        amrapView.viewModel = AthleteSessionResultsCountViewModel(sessionType: .amrap, sessionTypeAmount: athleteResults.amrapCount)
-        forTimeView.viewModel = AthleteSessionResultsCountViewModel(sessionType: .forTime, sessionTypeAmount: athleteResults.forTimeCount)
-        finisherView.viewModel = AthleteSessionResultsCountViewModel(sessionType: .finisher, sessionTypeAmount: athleteResults.finisherCount)
-        emomResults.viewModel = AthleteSessionResultsCountViewModel(sessionType: .emom, sessionTypeAmount: athleteResults.emomCount)
+        amrapView.viewModel = AthleteSessionResultsCountViewModel(wodType: .amrap, wodTypeAmount: athleteResults.amrapCount)
+        forTimeView.viewModel = AthleteSessionResultsCountViewModel(wodType: .forTime, wodTypeAmount: athleteResults.forTimeCount)
+        finisherView.viewModel = AthleteSessionResultsCountViewModel(wodType: .finisher, wodTypeAmount: athleteResults.finisherCount)
+        emomResults.viewModel = AthleteSessionResultsCountViewModel(wodType: .emom, wodTypeAmount: athleteResults.emomCount)
         
     }
     

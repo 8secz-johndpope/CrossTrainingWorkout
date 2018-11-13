@@ -22,3 +22,6 @@
 
 "INPUT_VALIDATION.PASSWORD.CORRESPONDANCE" = "Passwords do not match";
 "INPUT_VALIDATION.PASSWORD.LENGTH" = "Your password must contain at least 6 caracters";
+
+"INPUT_VALIDATION.WOD.WOD_TYPE" = "You should select a type";
+"INPUT_VALIDATION.WOD.TIMECAP" = "You should define a timecap";
