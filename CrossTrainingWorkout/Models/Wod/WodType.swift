@@ -33,4 +33,8 @@ enum WodType: String {
             return "Finisher"
         }
     }
+    
+    var predicate: NSPredicate? {
+        return NSPredicate(format: "wodType == %@", self.rawValue)
+    }
 }
