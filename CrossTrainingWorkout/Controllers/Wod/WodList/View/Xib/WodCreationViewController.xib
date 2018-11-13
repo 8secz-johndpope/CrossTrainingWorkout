@@ -11,13 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewWodViewController" customModule="CrossTrainingWorkout" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WodCreationViewController" customModule="CrossTrainingWorkout" customModuleProvider="target">
             <connections>
                 <outlet property="amrapButton" destination="ZlF-6A-8tO" id="qia-5x-l3l"/>
                 <outlet property="emomButton" destination="r0f-Oj-G9g" id="wGM-EB-g4o"/>
                 <outlet property="finisherButton" destination="SWi-kb-LfX" id="vam-Fk-KEJ"/>
                 <outlet property="forTimeButton" destination="oeU-T3-x0h" id="nha-fx-1pf"/>
                 <outlet property="pickerView" destination="WME-PT-TWn" id="BAW-fj-TGl"/>
+                <outlet property="timeCap" destination="tdv-e7-RKJ" id="KhV-pt-NDz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mM9-0b-7PX"/>
                 <outlet property="wodName" destination="lNc-Xa-PVs" id="eyp-EV-Q64"/>
             </connections>
@@ -49,7 +50,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-Zz-aak">
-                            <rect key="frame" x="0.0" y="89.5" width="801" height="55.5"/>
+                            <rect key="frame" x="0.0" y="90" width="801" height="53.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOk-Y0-6Do">
                                     <rect key="frame" x="0.0" y="0.0" width="801" height="20.5"/>
@@ -58,10 +59,10 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Ei1-Kb-ybA">
-                                    <rect key="frame" x="0.0" y="23.5" width="801" height="32"/>
+                                    <rect key="frame" x="0.0" y="23.5" width="801" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlF-6A-8tO" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="55" height="32"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlF-6A-8tO" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="AMRAP">
@@ -71,8 +72,8 @@
                                                 <action selector="didSelectType:" destination="-1" eventType="touchUpInside" id="G5t-Ih-rZ5"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-T3-x0h" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                            <rect key="frame" x="241.5" y="0.0" width="68" height="32"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-T3-x0h" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                            <rect key="frame" x="241.5" y="0.0" width="68" height="30"/>
                                             <state key="normal" title="FOR TIME">
                                                 <color key="titleColor" name="newWodType"/>
                                             </state>
@@ -80,8 +81,8 @@
                                                 <action selector="didSelectType:" destination="-1" eventType="touchUpInside" id="tMa-1b-oOJ"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-kb-LfX" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                            <rect key="frame" x="495.5" y="0.0" width="70" height="32"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-kb-LfX" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                            <rect key="frame" x="495.5" y="0.0" width="70" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <state key="normal" title="FINISHER">
                                                 <color key="titleColor" name="newWodType"/>
@@ -90,8 +91,8 @@
                                                 <action selector="didSelectType:" destination="-1" eventType="touchUpInside" id="zkT-j9-WUE"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-Oj-G9g" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
-                                            <rect key="frame" x="752" y="0.0" width="49" height="32"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-Oj-G9g" customClass="RoundedRedButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                            <rect key="frame" x="752" y="0.0" width="49" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <state key="normal" title="EMOM">
                                                 <color key="titleColor" name="newWodType"/>
@@ -105,29 +106,29 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="lAz-8m-JzX">
-                            <rect key="frame" x="0.0" y="181.5" width="801" height="20.5"/>
+                            <rect key="frame" x="0.0" y="180" width="801" height="21"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-ov-ivo">
-                                    <rect key="frame" x="0.0" y="0.0" width="801" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="801" height="21"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-CF-zbf">
-                                            <rect key="frame" x="0.0" y="0.0" width="44" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urE-GH-cF2">
-                                            <rect key="frame" x="44" y="0.0" width="757" height="20.5"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdv-e7-RKJ" customClass="NoCaretTextField" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                            <rect key="frame" x="44" y="0.0" width="757" height="21"/>
+                                            <color key="textColor" red="0.49019607840000001" green="0.59999999999999998" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.35686274509803922" green="0.4392156862745098" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                 </stackView>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QUQ-hN-TQW">
-                            <rect key="frame" x="0.0" y="238" width="801" height="216"/>
+                            <rect key="frame" x="0.0" y="237.5" width="801" height="216"/>
                             <subviews>
                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WME-PT-TWn">
                                     <rect key="frame" x="0.0" y="0.0" width="801" height="216"/>
@@ -144,28 +145,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="549" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzW-AG-mmJ">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzW-AG-mmJ">
                                             <rect key="frame" x="554" y="0.0" width="120" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="H0x-Eg-W2j"/>
+                                                <constraint firstAttribute="height" priority="750" constant="40" id="TI1-W8-mTA"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <state key="normal" title="Annuler">
                                                 <color key="titleColor" red="0.56470588239999997" green="0.96470588239999999" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="hgO-0t-FbX"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dal-Cn-123" customClass="RoundedCornerButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dal-Cn-123" customClass="RoundedCornerButton" customModule="CrossTrainingWorkout" customModuleProvider="target">
                                             <rect key="frame" x="679" y="0.0" width="122" height="40"/>
                                             <color key="backgroundColor" red="0.13725490200000001" green="0.73725490199999999" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="122" id="cas-ps-aEt"/>
-                                                <constraint firstAttribute="height" constant="40" id="wdW-sh-NQg"/>
+                                                <constraint firstAttribute="height" priority="750" constant="40" id="wdW-sh-NQg"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                             <state key="normal" title="Valider">
                                                 <color key="titleColor" red="0.14901960780000001" green="0.21960784310000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="submit:" destination="-1" eventType="touchUpInside" id="jwb-Qb-5Wq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -179,7 +187,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sDL-u9-jTY" secondAttribute="trailing" constant="10" id="15d-l1-Mmx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sDL-u9-jTY" secondAttribute="bottom" constant="10" id="8Fl-tq-tkz"/>
                 <constraint firstItem="sDL-u9-jTY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="94t-Cm-EEw"/>
-                <constraint firstItem="sDL-u9-jTY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="eJC-ep-sZa"/>
+                <constraint firstItem="sDL-u9-jTY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" constant="10" id="eJC-ep-sZa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -15,6 +15,11 @@
 		0D12940D2041BE46003CFA9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D12940F2041BE46003CFA9B /* Localizable.strings */; };
 		0D1D9AEA2026173300C61CAC /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AE92026173300C61CAC /* Athlete.swift */; };
 		0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9AED2026179300C61CAC /* Wod.swift */; };
+		0D26821E219AC9BB006532F6 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */; };
+		0D268222219AEAFE006532F6 /* WodEntityDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */; };
+		0D268223219AEAFE006532F6 /* WodCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268221219AEAFE006532F6 /* WodCellViewModel.swift */; };
+		0D268225219AEB25006532F6 /* WodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D268224219AEB25006532F6 /* WodCell.swift */; };
+		0D268227219AEC9B006532F6 /* WodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D268226219AEC9B006532F6 /* WodCell.xib */; };
 		0D306AD72190A169003C4C2D /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AD62190A169003C4C2D /* Transitionable.swift */; };
 		0D306AE42190A3AE003C4C2D /* CommonControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */; };
 		0D306AE621919354003C4C2D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306AE521919354003C4C2D /* App.swift */; };
@@ -25,24 +30,24 @@
 		0D306B1E2191E723003C4C2D /* ValidableTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */; };
 		0D306B202191F06F003C4C2D /* ValidableTextFieldContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */; };
 		0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */; };
-		0D306B2421943B05003C4C2D /* WodListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B2321943B05003C4C2D /* WodListTableViewController.xib */; };
-		0D306B2621943B79003C4C2D /* WodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2521943B79003C4C2D /* WodListViewController.swift */; };
+		0D306B2421943B05003C4C2D /* WodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B2321943B05003C4C2D /* WodListViewController.xib */; };
+		0D306B2621943B79003C4C2D /* WodCoordinatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */; };
 		0D306B2B21948001003C4C2D /* HeaderTabBarControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2A21948001003C4C2D /* HeaderTabBarControl.swift */; };
 		0D306B2D21948123003C4C2D /* HeaderTabBarElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */; };
 		0D306B2F21948147003C4C2D /* HeaderTabBarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */; };
 		0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */; };
 		0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */; };
 		0D306B37219591EE003C4C2D /* HeaderTabBarElementPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */; };
-		0D306B3D21959A0D003C4C2D /* WodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3C21959A0D003C4C2D /* WodListTableViewController.swift */; };
-		0D306B3F21959AFA003C4C2D /* WodListFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3E21959AFA003C4C2D /* WodListFiltersViewController.swift */; };
-		0D306B4121959B43003C4C2D /* WodListFiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4021959B43003C4C2D /* WodListFiltersViewController.xib */; };
+		0D306B3D21959A0D003C4C2D /* WodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3C21959A0D003C4C2D /* WodListViewController.swift */; };
+		0D306B3F21959AFA003C4C2D /* WodFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */; };
+		0D306B4121959B43003C4C2D /* WodFiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */; };
 		0D306B452195CDCC003C4C2D /* WodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B442195CDCC003C4C2D /* WodType.swift */; };
 		0D306B472195CE02003C4C2D /* SessionAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B462195CE02003C4C2D /* SessionAmrap.swift */; };
 		0D306B492195CE06003C4C2D /* SessionFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B482195CE06003C4C2D /* SessionFinisher.swift */; };
 		0D306B4B2195CE07003C4C2D /* SessionForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B4A2195CE07003C4C2D /* SessionForTime.swift */; };
 		0D306B4D2195CE09003C4C2D /* SessionEmom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B4C2195CE09003C4C2D /* SessionEmom.swift */; };
-		0D306B4F2195D3BA003C4C2D /* NewWodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4E2195D3BA003C4C2D /* NewWodViewController.xib */; };
-		0D306B512195D3ED003C4C2D /* NewWodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B502195D3ED003C4C2D /* NewWodViewController.swift */; };
+		0D306B4F2195D3BA003C4C2D /* WodCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */; };
+		0D306B512195D3ED003C4C2D /* WodCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */; };
 		0D306B532195E807003C4C2D /* RoundedRedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D306B522195E807003C4C2D /* RoundedRedButton.swift */; };
 		0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */; };
 		0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E2862039C37C009DF452 /* NotifiyingToken.swift */; };
@@ -121,6 +126,11 @@
 		0D1294102041BE62003CFA9B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D1D9AE92026173300C61CAC /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		0D1D9AED2026179300C61CAC /* Wod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wod.swift; sourceTree = "<group>"; };
+		0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
+		0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodEntityDataHandler.swift; sourceTree = "<group>"; };
+		0D268221219AEAFE006532F6 /* WodCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodCellViewModel.swift; sourceTree = "<group>"; };
+		0D268224219AEB25006532F6 /* WodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCell.swift; sourceTree = "<group>"; };
+		0D268226219AEC9B006532F6 /* WodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodCell.xib; sourceTree = "<group>"; };
 		0D306AD62190A169003C4C2D /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
 		0D306AE32190A3AE003C4C2D /* CommonControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonControllerState.swift; sourceTree = "<group>"; };
 		0D306AE521919354003C4C2D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -133,24 +143,24 @@
 		0D306B1D2191E723003C4C2D /* ValidableTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainer.swift; sourceTree = "<group>"; };
 		0D306B1F2191F06F003C4C2D /* ValidableTextFieldContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextFieldContainerTests.swift; sourceTree = "<group>"; };
 		0D306B212193187D003C4C2D /* AthletesResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesResultsViewController.swift; sourceTree = "<group>"; };
-		0D306B2321943B05003C4C2D /* WodListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodListTableViewController.xib; sourceTree = "<group>"; };
-		0D306B2521943B79003C4C2D /* WodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListViewController.swift; sourceTree = "<group>"; };
+		0D306B2321943B05003C4C2D /* WodListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodListViewController.xib; sourceTree = "<group>"; };
+		0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCoordinatorViewController.swift; sourceTree = "<group>"; };
 		0D306B2A21948001003C4C2D /* HeaderTabBarControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarControl.swift; sourceTree = "<group>"; };
 		0D306B2C21948123003C4C2D /* HeaderTabBarElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElementView.swift; sourceTree = "<group>"; };
 		0D306B2E21948147003C4C2D /* HeaderTabBarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarViewState.swift; sourceTree = "<group>"; };
 		0D306B302194815F003C4C2D /* HeaderTabBarElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElement.swift; sourceTree = "<group>"; };
 		0D306B342194A6F8003C4C2D /* HeaderTabBarElementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTabBarElementView.xib; sourceTree = "<group>"; };
 		0D306B36219591EE003C4C2D /* HeaderTabBarElementPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTabBarElementPosition.swift; sourceTree = "<group>"; };
-		0D306B3C21959A0D003C4C2D /* WodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListTableViewController.swift; sourceTree = "<group>"; };
-		0D306B3E21959AFA003C4C2D /* WodListFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListFiltersViewController.swift; sourceTree = "<group>"; };
-		0D306B4021959B43003C4C2D /* WodListFiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodListFiltersViewController.xib; sourceTree = "<group>"; };
+		0D306B3C21959A0D003C4C2D /* WodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodListViewController.swift; sourceTree = "<group>"; };
+		0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodFiltersViewController.swift; sourceTree = "<group>"; };
+		0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodFiltersViewController.xib; sourceTree = "<group>"; };
 		0D306B442195CDCC003C4C2D /* WodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodType.swift; sourceTree = "<group>"; };
 		0D306B462195CE02003C4C2D /* SessionAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAmrap.swift; sourceTree = "<group>"; };
 		0D306B482195CE06003C4C2D /* SessionFinisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFinisher.swift; sourceTree = "<group>"; };
 		0D306B4A2195CE07003C4C2D /* SessionForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionForTime.swift; sourceTree = "<group>"; };
 		0D306B4C2195CE09003C4C2D /* SessionEmom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEmom.swift; sourceTree = "<group>"; };
-		0D306B4E2195D3BA003C4C2D /* NewWodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWodViewController.xib; sourceTree = "<group>"; };
-		0D306B502195D3ED003C4C2D /* NewWodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWodViewController.swift; sourceTree = "<group>"; };
+		0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodCreationViewController.xib; sourceTree = "<group>"; };
+		0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodCreationViewController.swift; sourceTree = "<group>"; };
 		0D306B522195E807003C4C2D /* RoundedRedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRedButton.swift; sourceTree = "<group>"; };
 		0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0D63E2862039C37C009DF452 /* NotifiyingToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiyingToken.swift; sourceTree = "<group>"; };
@@ -242,6 +252,7 @@
 				0D043FCC20A9F50000D6226C /* StringExtensions.swift */,
 				0DF2FFB621198F4000F3864F /* ResultsExtension.swift */,
 				0D584D4721834D3500A1ABC5 /* UIViewControllerExtensions.swift */,
+				0D26821D219AC9BB006532F6 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -349,6 +360,15 @@
 			path = Wod;
 			sourceTree = "<group>";
 		};
+		0D26821F219AEAA5006532F6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0D268221219AEAFE006532F6 /* WodCellViewModel.swift */,
+				0D268220219AEAFE006532F6 /* WodEntityDataHandler.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		0D306B142191E41F003C4C2D /* CrossTrainingWorkoutTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,11 +395,12 @@
 		0D306B4221959C3D003C4C2D /* WodList */ = {
 			isa = PBXGroup;
 			children = (
+				0D26821F219AEAA5006532F6 /* Data */,
 				0D306B4321959C55003C4C2D /* View */,
-				0D306B2521943B79003C4C2D /* WodListViewController.swift */,
-				0D306B3C21959A0D003C4C2D /* WodListTableViewController.swift */,
-				0D306B3E21959AFA003C4C2D /* WodListFiltersViewController.swift */,
-				0D306B502195D3ED003C4C2D /* NewWodViewController.swift */,
+				0D306B2521943B79003C4C2D /* WodCoordinatorViewController.swift */,
+				0D306B3C21959A0D003C4C2D /* WodListViewController.swift */,
+				0D306B3E21959AFA003C4C2D /* WodFiltersViewController.swift */,
+				0D306B502195D3ED003C4C2D /* WodCreationViewController.swift */,
 			);
 			path = WodList;
 			sourceTree = "<group>";
@@ -387,9 +408,8 @@
 		0D306B4321959C55003C4C2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D306B2321943B05003C4C2D /* WodListTableViewController.xib */,
-				0D306B4021959B43003C4C2D /* WodListFiltersViewController.xib */,
-				0D306B4E2195D3BA003C4C2D /* NewWodViewController.xib */,
+				0D6445D0219B106400289E31 /* Cell */,
+				0D6445CF219B105600289E31 /* Xib */,
 				0D306B522195E807003C4C2D /* RoundedRedButton.swift */,
 			);
 			path = View;
@@ -424,6 +444,25 @@
 				0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */,
 			);
 			path = DatabaseKit;
+			sourceTree = "<group>";
+		};
+		0D6445CF219B105600289E31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				0D306B2321943B05003C4C2D /* WodListViewController.xib */,
+				0D306B4021959B43003C4C2D /* WodFiltersViewController.xib */,
+				0D306B4E2195D3BA003C4C2D /* WodCreationViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		0D6445D0219B106400289E31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0D268224219AEB25006532F6 /* WodCell.swift */,
+				0D268226219AEC9B006532F6 /* WodCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0D6C150C202619050063FE0D /* Result */ = {
@@ -491,8 +530,8 @@
 		0D6C1523202625ED0063FE0D /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				0DF2FFB821198FAB00F3864F /* Athletes */,
 				0D6C1527202626150063FE0D /* Team.storyboard */,
+				0DF2FFB821198FAB00F3864F /* Athletes */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -736,15 +775,16 @@
 			files = (
 				0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */,
 				0DCBBC212014EE2C0090EAD2 /* LaunchScreen.storyboard in Resources */,
-				0D306B4121959B43003C4C2D /* WodListFiltersViewController.xib in Resources */,
+				0D306B4121959B43003C4C2D /* WodFiltersViewController.xib in Resources */,
 				0DCBBC1E2014EE2C0090EAD2 /* Assets.xcassets in Resources */,
 				0DCBBC1C2014EE2C0090EAD2 /* Main.storyboard in Resources */,
 				0D12940D2041BE46003CFA9B /* Localizable.strings in Resources */,
 				0D6C152A2026261D0063FE0D /* Wod.storyboard in Resources */,
 				0D6C15262026260D0063FE0D /* History.storyboard in Resources */,
-				0D306B4F2195D3BA003C4C2D /* NewWodViewController.xib in Resources */,
+				0D306B4F2195D3BA003C4C2D /* WodCreationViewController.xib in Resources */,
 				0D6C1528202626150063FE0D /* Team.storyboard in Resources */,
-				0D306B2421943B05003C4C2D /* WodListTableViewController.xib in Resources */,
+				0D268227219AEC9B006532F6 /* WodCell.xib in Resources */,
+				0D306B2421943B05003C4C2D /* WodListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,12 +870,14 @@
 				0DF2FFC2211990AD00F3864F /* NewAthleteViewController.swift in Sources */,
 				0D63E2942039C886009DF452 /* AthletesListViewController.swift in Sources */,
 				0D306B2D21948123003C4C2D /* HeaderTabBarElementView.swift in Sources */,
+				0D268223219AEAFE006532F6 /* WodCellViewModel.swift in Sources */,
 				0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */,
 				0D306B222193187D003C4C2D /* AthletesResultsViewController.swift in Sources */,
 				0D6C150E2026191E0063FE0D /* Result.swift in Sources */,
 				0DCBBC192014EE2C0090EAD2 /* ViewController.swift in Sources */,
+				0D268225219AEB25006532F6 /* WodCell.swift in Sources */,
 				0D306AE821919778003C4C2D /* AppDependent.swift in Sources */,
-				0D306B512195D3ED003C4C2D /* NewWodViewController.swift in Sources */,
+				0D306B512195D3ED003C4C2D /* WodCreationViewController.swift in Sources */,
 				0D6C1509202617E00063FE0D /* WodEmom.swift in Sources */,
 				0D63E28D2039C37C009DF452 /* Storable.swift in Sources */,
 				0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */,
@@ -845,7 +887,8 @@
 				0D6C15142026194F0063FE0D /* EmomResult.swift in Sources */,
 				0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */,
 				0D6C15122026193E0063FE0D /* TimeResult.swift in Sources */,
-				0D306B3D21959A0D003C4C2D /* WodListTableViewController.swift in Sources */,
+				0D306B3D21959A0D003C4C2D /* WodListViewController.swift in Sources */,
+				0D26821E219AC9BB006532F6 /* TimeIntervalExtensions.swift in Sources */,
 				0D1D9AEA2026173300C61CAC /* Athlete.swift in Sources */,
 				0D63E2912039C37C009DF452 /* ReadableDatabase.swift in Sources */,
 				0DF2FFBE2119905300F3864F /* AthleteCellViewModel.swift in Sources */,
@@ -856,6 +899,7 @@
 				0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */,
 				0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */,
 				0D1294032041B65C003CFA9B /* UIColorExtensions.swift in Sources */,
+				0D268222219AEAFE006532F6 /* WodEntityDataHandler.swift in Sources */,
 				0D6C1517202619A80063FE0D /* Resultable.swift in Sources */,
 				0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */,
 				0D306B492195CE06003C4C2D /* SessionFinisher.swift in Sources */,
@@ -875,9 +919,9 @@
 				0D63E28F2039C37C009DF452 /* NotifiyingWrittableDatabase.swift in Sources */,
 				0D306B4D2195CE09003C4C2D /* SessionEmom.swift in Sources */,
 				0D306B452195CDCC003C4C2D /* WodType.swift in Sources */,
-				0D306B2621943B79003C4C2D /* WodListViewController.swift in Sources */,
+				0D306B2621943B79003C4C2D /* WodCoordinatorViewController.swift in Sources */,
 				0D63E296203B4E41009DF452 /* TheNibLoadable.swift in Sources */,
-				0D306B3F21959AFA003C4C2D /* WodListFiltersViewController.swift in Sources */,
+				0D306B3F21959AFA003C4C2D /* WodFiltersViewController.swift in Sources */,
 				0D584D4821834D3500A1ABC5 /* UIViewControllerExtensions.swift in Sources */,
 				0D306B2B21948001003C4C2D /* HeaderTabBarControl.swift in Sources */,
 				0D63E28C2039C37C009DF452 /* NotifiyingToken.swift in Sources */,

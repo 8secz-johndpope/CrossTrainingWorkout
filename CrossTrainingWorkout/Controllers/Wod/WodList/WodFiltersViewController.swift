@@ -17,12 +17,12 @@ enum WodTypeTabBarSelectedIndex: Int {
     }
 }
 
-protocol WodListFiltersViewControllerDelegate: class {
+protocol WodFiltersViewControllerDelegate: class {
     
     func didFilterWods(toType: WodType)
 }
 
-class WodListFiltersViewController: UIViewController {
+class WodFiltersViewController: UIViewController {
     
     private lazy var tabBarElements: [HeaderTabBarElement] = {
         return [
@@ -40,7 +40,7 @@ class WodListFiltersViewController: UIViewController {
         }
     }
     
-    weak var delegate: WodListFiltersViewControllerDelegate?
+    weak var delegate: WodFiltersViewControllerDelegate?
     
     @objc private func didUpdateFilters() {
         guard let selectedIndex = headerTabBar.selectedIndex, let selected = WodTypeTabBarSelectedIndex(rawValue: selectedIndex) else {return}

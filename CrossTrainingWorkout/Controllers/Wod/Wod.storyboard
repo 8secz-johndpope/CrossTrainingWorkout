@@ -37,7 +37,7 @@
         <!--WOD-->
         <scene sceneID="KRP-jg-cVo">
             <objects>
-                <viewController id="F7d-Is-v0r" customClass="WodListViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F7d-Is-v0r" customClass="WodCoordinatorViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wr5-8U-weh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,31 +85,34 @@
                     </view>
                     <navigationItem key="navigationItem" title="WOD" id="4yQ-fq-mKO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newWodContainer" destination="yQ3-Qu-g6t" id="gMR-54-IW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPF-xE-BT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="535.20000000000005" y="-322.90640394088672"/>
         </scene>
-        <!--Wod List Filters View Controller-->
+        <!--Wod Filters View Controller-->
         <scene sceneID="qqe-yb-ujQ">
             <objects>
-                <viewController id="QhP-bH-B9U" customClass="WodListFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="QhP-bH-B9U" customClass="WodFiltersViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukS-Er-ZqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318" y="-323"/>
         </scene>
-        <!--Wod List Table View Controller-->
+        <!--Wod List View Controller-->
         <scene sceneID="xXG-PH-K2F">
             <objects>
-                <viewController id="7qI-HN-KVO" customClass="WodListTableViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="7qI-HN-KVO" customClass="WodListViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv0-eE-SgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318" y="-11"/>
         </scene>
-        <!--New Wod View Controller-->
+        <!--Wod Creation View Controller-->
         <scene sceneID="h37-Oi-05L">
             <objects>
-                <viewController id="TgP-gc-CFQ" customClass="NewWodViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="TgP-gc-CFQ" customClass="WodCreationViewController" customModule="CrossTrainingWorkout" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtU-7b-zQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318" y="-520"/>

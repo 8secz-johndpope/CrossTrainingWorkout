@@ -81,10 +81,7 @@ class AthletesListViewController: UIViewController, CommonStateTransitionable {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        navigationItem.backBarButtonItem?.title = ""
         if let newAthleteVC = segue.destination as? NewAthleteViewController {
-            
-            newAthleteVC.navigationItem.title = "^d pzeddzed"
             
             segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
             newAthleteVC.dutyEndedBlock = { (_) in
