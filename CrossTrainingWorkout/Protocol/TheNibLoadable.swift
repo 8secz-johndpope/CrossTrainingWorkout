@@ -7,29 +7,35 @@
 //
 
 import UIKit
+import SnapKit
 
-//protocol TheNibLoadable: class {
-//    
-//    static var nibName: String { get }
-//}
-//extension TheNibLoadable {
-//    
-//    /// Nib name of the UIView
-//    static var nibName: String {
-//        return String(describing: self)
-//    }
-//    
-//}
-//extension TheNibLoadable where Self: UIView {
-//    
-//    /// Nib instance
-//    static var nib: UINib {
-//        return UINib(nibName: Self.nibName, bundle: nil)
-//    }
-//    
-//    /// Returns an instance of the view wich extends the protocol
-//    static var instanceFromNib: Self {
-//        let view: Self = Self.nib.instantiate(withOwner: nil, options: nil)[0] as! Self
-//        return view
-//    }
-//}
+public protocol NibLoadable: class {}
+public extension NibLoadable where Self: UIView {
+    
+    /// Nib name of the UIView
+    static var nibName: String {
+        return String(describing: self)
+    }
+    
+    /// Nib instance
+    private var nib: UINib {
+        return UINib(nibName: Self.nibName, bundle: nil)
+    }
+    
+    /// Returns an instance of the view
+    private var instanceFromNib: UIView {
+        return nib.instantiate(withOwner: self, options: nil).first as! UIView
+    }
+    
+    /// Load nib and add it into view
+    public func loadView() {
+        
+        let nib = instanceFromNib
+        nib.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(nib)
+        nib.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+}
