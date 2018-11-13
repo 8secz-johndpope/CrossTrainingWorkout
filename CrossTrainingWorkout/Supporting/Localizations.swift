@@ -30,6 +30,23 @@ public class Localizations {
 
         }
 
+        public class Firstname {
+
+            /// Base translation: first name
+            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
+
+        }
+
+        public class Wod {
+
+            /// Base translation: You should define a timecap
+            public static var Timecap : String = NSLocalizedString("INPUT_VALIDATION.WOD.TIMECAP", tableName: nil, bundle: Bundle.main, comment: "")
+
+            /// Base translation: You should select a type
+            public static var WodType : String = NSLocalizedString("INPUT_VALIDATION.WOD.WOD_TYPE", tableName: nil, bundle: Bundle.main, comment: "")
+
+        }
+
         public class Status {
 
             /// Base translation: %@ empty
@@ -41,13 +58,6 @@ public class Localizations {
             public static func Invalid(_ value1 : String) -> String {
                 return String(format: NSLocalizedString("INPUT_VALIDATION.STATUS.INVALID", tableName: nil, bundle: Bundle.main, comment: ""), value1)
             }
-
-        }
-
-        public class Firstname {
-
-            /// Base translation: first name
-            public static var Title : String = NSLocalizedString("INPUT_VALIDATION.FIRSTNAME.TITLE", tableName: nil, bundle: Bundle.main, comment: "")
 
         }
 
