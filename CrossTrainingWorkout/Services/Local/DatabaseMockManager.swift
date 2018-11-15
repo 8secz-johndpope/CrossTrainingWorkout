@@ -80,28 +80,28 @@ class DatabaseMockManager {
         amrap.id = "1"
         amrap.wodType = WodType.amrap.rawValue
         amrap.name = "AMRAP WOD"
-        amrap.movements = movements
+        amrap.movements.append(objectsIn: movements)
         amrap.timeCap = 20
         
         let forTime = Wod()
         forTime.wodType = WodType.forTime.rawValue
         forTime.id = "2"
         forTime.name = "FORTIME WOD"
-        forTime.movements = movements
+//        forTime.movements.append(objectsIn: movements)
         forTime.timeCap = 20
         
         let emom = Wod()
         emom.wodType = WodType.emom.rawValue
         emom.id = "3"
         emom.name = "EMOM WOD"
-        emom.movements = movements
+//        emom.movements.append(objectsIn: movements)
         emom.timeCap = 20
         
         let finisher = Wod()
         finisher.wodType = WodType.finisher.rawValue
         finisher.id = "4"
         finisher.name = "FINISHER WOD"
-        finisher.movements = movements
+//        finisher.movements.append(objectsIn: movements)
         finisher.timeCap = 20
         
         // --------------------------------------------

@@ -61,6 +61,12 @@
 		0D63E298203B4E58009DF452 /* TheReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E297203B4E58009DF452 /* TheReusableCell.swift */; };
 		0D63E29A203B4E82009DF452 /* FakeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63E299203B4E82009DF452 /* FakeableCell.swift */; };
 		0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445D1219B17E300289E31 /* NoCaretTextField.swift */; };
+		0D6445DA219C66D700289E31 /* WodSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445D9219C66D700289E31 /* WodSummaryViewController.swift */; };
+		0D6445DC219C67FB00289E31 /* WodSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6445DB219C67FB00289E31 /* WodSummaryViewController.xib */; };
+		0D6445DF219C6E1B00289E31 /* MovementsDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445DE219C6E1B00289E31 /* MovementsDataHandler.swift */; };
+		0D6445E1219C6E3F00289E31 /* MovementCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445E0219C6E3F00289E31 /* MovementCellViewModel.swift */; };
+		0D6445E5219C708100289E31 /* MovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6445E4219C6E7800289E31 /* MovementCell.swift */; };
+		0D6445E6219C708400289E31 /* MovementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6445E3219C6E7800289E31 /* MovementCell.xib */; };
 		0D6BC6F1218C533600209410 /* NotifiyingReadableDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */; };
 		0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1504202617CC0063FE0D /* WodAmrap.swift */; };
 		0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C1506202617D70063FE0D /* WodForTime.swift */; };
@@ -175,6 +181,12 @@
 		0D63E297203B4E58009DF452 /* TheReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheReusableCell.swift; sourceTree = "<group>"; };
 		0D63E299203B4E82009DF452 /* FakeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeableCell.swift; sourceTree = "<group>"; };
 		0D6445D1219B17E300289E31 /* NoCaretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCaretTextField.swift; sourceTree = "<group>"; };
+		0D6445D9219C66D700289E31 /* WodSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodSummaryViewController.swift; sourceTree = "<group>"; };
+		0D6445DB219C67FB00289E31 /* WodSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WodSummaryViewController.xib; sourceTree = "<group>"; };
+		0D6445DE219C6E1B00289E31 /* MovementsDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementsDataHandler.swift; sourceTree = "<group>"; };
+		0D6445E0219C6E3F00289E31 /* MovementCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementCellViewModel.swift; sourceTree = "<group>"; };
+		0D6445E3219C6E7800289E31 /* MovementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementCell.xib; sourceTree = "<group>"; };
+		0D6445E4219C6E7800289E31 /* MovementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementCell.swift; sourceTree = "<group>"; };
 		0D6BC6F0218C533600209410 /* NotifiyingReadableDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiyingReadableDatabase.swift; sourceTree = "<group>"; };
 		0D6C1504202617CC0063FE0D /* WodAmrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodAmrap.swift; sourceTree = "<group>"; };
 		0D6C1506202617D70063FE0D /* WodForTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WodForTime.swift; sourceTree = "<group>"; };
@@ -468,6 +480,51 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0D6445D6219B29E000289E31 /* WodConstruction */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445D7219C667300289E31 /* View */,
+				0D6445D9219C66D700289E31 /* WodSummaryViewController.swift */,
+			);
+			path = WodConstruction;
+			sourceTree = "<group>";
+		};
+		0D6445D7219C667300289E31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445E2219C6E7000289E31 /* Cell */,
+				0D6445DD219C6DFB00289E31 /* Data */,
+				0D6445D8219C668200289E31 /* Xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D6445D8219C668200289E31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445DB219C67FB00289E31 /* WodSummaryViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		0D6445DD219C6DFB00289E31 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445E0219C6E3F00289E31 /* MovementCellViewModel.swift */,
+				0D6445DE219C6E1B00289E31 /* MovementsDataHandler.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0D6445E2219C6E7000289E31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0D6445E4219C6E7800289E31 /* MovementCell.swift */,
+				0D6445E3219C6E7800289E31 /* MovementCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0D6C150C202619050063FE0D /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				0D6C15292026261D0063FE0D /* Wod.storyboard */,
+				0D6445D6219B29E000289E31 /* WodConstruction */,
 				0D306B4221959C3D003C4C2D /* WodList */,
 			);
 			path = Wod;
@@ -778,6 +836,7 @@
 			files = (
 				0D306B352194A6F9003C4C2D /* HeaderTabBarElementView.xib in Resources */,
 				0DCBBC212014EE2C0090EAD2 /* LaunchScreen.storyboard in Resources */,
+				0D6445DC219C67FB00289E31 /* WodSummaryViewController.xib in Resources */,
 				0D306B4121959B43003C4C2D /* WodFiltersViewController.xib in Resources */,
 				0DCBBC1E2014EE2C0090EAD2 /* Assets.xcassets in Resources */,
 				0DCBBC1C2014EE2C0090EAD2 /* Main.storyboard in Resources */,
@@ -785,6 +844,7 @@
 				0D6C152A2026261D0063FE0D /* Wod.storyboard in Resources */,
 				0D6C15262026260D0063FE0D /* History.storyboard in Resources */,
 				0D306B4F2195D3BA003C4C2D /* WodCreationViewController.xib in Resources */,
+				0D6445E6219C708400289E31 /* MovementCell.xib in Resources */,
 				0D6C1528202626150063FE0D /* Team.storyboard in Resources */,
 				0D268227219AEC9B006532F6 /* WodCell.xib in Resources */,
 				0D306B2421943B05003C4C2D /* WodListViewController.xib in Resources */,
@@ -889,6 +949,7 @@
 				0DF2FFB521195CC800F3864F /* RealmEntityDataHandler.swift in Sources */,
 				0D6C15142026194F0063FE0D /* EmomResult.swift in Sources */,
 				0D6C1507202617D70063FE0D /* WodForTime.swift in Sources */,
+				0D6445DF219C6E1B00289E31 /* MovementsDataHandler.swift in Sources */,
 				0D6C15122026193E0063FE0D /* TimeResult.swift in Sources */,
 				0D306B3D21959A0D003C4C2D /* WodListViewController.swift in Sources */,
 				0D26821E219AC9BB006532F6 /* TimeIntervalExtensions.swift in Sources */,
@@ -903,6 +964,7 @@
 				0D1D9AEE2026179300C61CAC /* Wod.swift in Sources */,
 				0D1294032041B65C003CFA9B /* UIColorExtensions.swift in Sources */,
 				0D268222219AEAFE006532F6 /* WodEntityDataHandler.swift in Sources */,
+				0D6445E1219C6E3F00289E31 /* MovementCellViewModel.swift in Sources */,
 				0D6C1517202619A80063FE0D /* Resultable.swift in Sources */,
 				0D306B312194815F003C4C2D /* HeaderTabBarElement.swift in Sources */,
 				0D306B492195CE06003C4C2D /* SessionFinisher.swift in Sources */,
@@ -935,10 +997,12 @@
 				0DCBBC172014EE2C0090EAD2 /* AppDelegate.swift in Sources */,
 				0D6C150B202617F10063FE0D /* WodFinisher.swift in Sources */,
 				0D1294082041BA08003CFA9B /* RoundedCornerView.swift in Sources */,
+				0D6445DA219C66D700289E31 /* WodSummaryViewController.swift in Sources */,
 				0D12940A2041BA1F003CFA9B /* Cornerisable.swift in Sources */,
 				0D6445D2219B17E300289E31 /* NoCaretTextField.swift in Sources */,
 				0DF4C01C2030B52900CCAEEC /* RealmDatabase.swift in Sources */,
 				0D6C1505202617CC0063FE0D /* WodAmrap.swift in Sources */,
+				0D6445E5219C708100289E31 /* MovementCell.swift in Sources */,
 				0D63E2902039C37C009DF452 /* WrittableDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

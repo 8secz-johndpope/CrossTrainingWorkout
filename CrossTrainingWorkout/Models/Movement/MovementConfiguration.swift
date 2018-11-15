@@ -15,8 +15,11 @@ class MovementConfiguration: Object, Codable {
     // MARK: - Variables
     // **************************************************************
     
+    @objc dynamic var id: String! = ""
     @objc dynamic var movement: Movement?
     @objc dynamic var amount = 0
+    
+    let wod = LinkingObjects(fromType: Wod.self, property: "movements")
     
     // **************************************************************
     // MARK: - Encodable

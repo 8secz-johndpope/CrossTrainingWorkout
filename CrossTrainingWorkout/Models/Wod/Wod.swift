@@ -19,7 +19,8 @@ class Wod: Object, Codable {
     @objc dynamic var name: String!
     var timeCap: TimeInterval!
     @objc dynamic var wodType: String! = ""
-    var movements: List<MovementConfiguration>?
+    
+    let movements = List<MovementConfiguration>()
     
     // **************************************************************
     // MARK: - Encodable
